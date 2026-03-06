@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.team_name }}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ data.team_name_en }}</h1>
+            <p class="subtitle">{{ data.team_name }}</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#legends">名宿</a></li>
+                <li><a href="#data">数据</a></li>
+                <li><a href="#schedule">赛程</a></li>
+                <li><a href="#stats">比赛统计</a></li>
+                <li><a href="#hall">名人堂</a></li>
+                <li><a href="#history">历史</a></li>
+                <li><a href="/login" style="color: #c9a227;">管理</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>欢迎来到{{ data.team_name }}</h2>
+                <p class="hero-text">{{ data.slogan }}</p>
+                <div class="team-photo">
+                    <div class="photo-placeholder">球队合照</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="legends">
+            <div class="container">
+                <h2>名宿</h2>
+                <p class="section-desc">传奇球员，永远的榜样</p>
+                <div class="grid">
+                    {% for legend in data.legends %}
+                    <div class="card">
+                        <div class="card-photo"></div>
+                        <h3>{{ legend.name }}</h3>
+                        <p class="position">{{ legend.position }}</p>
+                        <p class="years">{{ legend.years }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="data">
+            <div class="container">
+                <h2>球队数据</h2>
+                <p class="section-desc">各项统计数据一览</p>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">{{ data.stats.games }}</div>
+                        <div class="stat-label">比赛场次</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">{{ data.stats.win_rate }}</div>
+                        <div class="stat-label">胜率</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">{{ data.stats.championships }}</div>
+                        <div class="stat-label">冠军</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">{{ data.stats.players }}</div>
+                        <div class="stat-label">球员总数</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <div class="container">
+                <h2>赛程</h2>
+                <p class="section-desc">Upcoming Matches</p>
+                <div class="schedule-list">
+                    {% for match in data.schedule %}
+                    <div class="schedule-item">
+                        <div class="match-date">{{ match.date }}</div>
+                        <div class="match-info">
+                            <span class="team">{{ match.home }}</span>
+                            <span class="vs">vs</span>
+                            <span class="team">{{ match.away }}</span>
+                        </div>
+                        <div class="match-location">{{ match.location }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="stats">
+            <div class="container">
+                <h2>比赛统计</h2>
+                <p class="section-desc">球员个人数据</p>
+                <table class="stats-table">
+                    <thead>
+                        <tr>
+                            <th>球员</th>
+                            <th>场均得分</th>
+                            <th>场均篮板</th>
+                            <th>场均助攻</th>
+                            <th>投篮命中率</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for player in data.player_stats %}
+                        <tr>
+                            <td>{{ player.name }}</td>
+                            <td>{{ player.points }}</td>
+                            <td>{{ player.rebounds }}</td>
+                            <td>{{ player.assists }}</td>
+                            <td>{{ player.fg }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="hall">
+            <div class="container">
+                <h2>名人堂</h2>
+                <p class="section-desc">荣誉与成就</p>
+                <div class="hall-of-fame">
+                    {% for honor in data.honors %}
+                    <div class="honor-item">
+                        <div class="honor-year">{{ honor.year }}</div>
+                        <div class="honor-content">
+                            <h3>{{ honor.title }}</h3>
+                            <p>{{ honor.desc }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="history">
+            <div class="container">
+                <h2>球队历史</h2>
+                <p class="section-desc">传承与荣耀</p>
+                <div class="timeline">
+                    {% for item in data.history %}
+                    <div class="timeline-item">
+                        <div class="timeline-year">{{ item.year }}</div>
+                        <div class="timeline-content">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.desc }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 {{ data.team_name }} | {{ data.team_name_en }}</p>
+            <p class="contact">联系我们: xjtlubasketball@example.com</p>
+        </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - 西交利物浦大学篮球队</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a365d, #2c5282);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            background: #c9a227;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #1a365d;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #c9a227;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: #1a365d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #2c5282;
+        }
+        .btn-save {
+            background: #c9a227;
+            margin-top: 20px;
+        }
+        .btn-save:hover {
+            background: #b8941f;
+        }
+        .item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        .item .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e53e3e;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .add-btn {
+            background: #38a169;
+            margin-bottom: 15px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        #message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            border-radius: 5px;
+            color: white;
+            display: none;
+        }
+        #message.success {
+            background: #38a169;
+            display: block;
+        }
+        #message.error {
+            background: #e53e3e;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>西交利物浦大学篮球队管理后台</h1>
+        <a href="/logout">退出登录</a>
+    </div>
+
+    <div class="container">
+        <!-- 基本信息 -->
+        <div class="section">
+            <h2>基本信息</h2>
+            <div class="form-group">
+                <label>球队名称（中文）</label>
+                <input type="text" id="team_name" value="{{ data.team_name }}">
+            </div>
+            <div class="form-group">
+                <label>球队名称（英文）</label>
+                <input type="text" id="team_name_en" value="{{ data.team_name_en }}">
+            </div>
+            <div class="form-group">
+                <label>口号</label>
+                <input type="text" id="slogan" value="{{ data.slogan }}">
+            </div>
+        </div>
+
+        <!-- 球队数据 -->
+        <div class="section">
+            <h2>球队数据</h2>
+            <div class="stats-grid">
+                <div class="form-group">
+                    <label>比赛场次</label>
+                    <input type="text" id="stats_games" value="{{ data.stats.games }}">
+                </div>
+                <div class="form-group">
+                    <label>胜率</label>
+                    <input type="text" id="stats_win_rate" value="{{ data.stats.win_rate }}">
+                </div>
+                <div class="form-group">
+                    <label>冠军数</label>
+                    <input type="text" id="stats_championships" value="{{ data.stats.championships }}">
+                </div>
+                <div class="form-group">
+                    <label>球员总数</label>
+                    <input type="text" id="stats_players" value="{{ data.stats.players }}">
+                </div>
+            </div>
+        </div>
+
+        <!-- 名宿管理 -->
+        <div class="section">
+            <h2>名宿</h2>
+            <button class="btn add-btn" onclick="addLegend()">+ 添加名宿</button>
+            <div id="legends"></div>
+        </div>
+
+        <!-- 赛程管理 -->
+        <div class="section">
+            <h2>赛程</h2>
+            <button class="btn add-btn" onclick="addSchedule()">+ 添加比赛</button>
+            <div id="schedule"></div>
+        </div>
+
+        <!-- 球员统计 -->
+        <div class="section">
+            <h2>球员统计</h2>
+            <button class="btn add-btn" onclick="addPlayer()">+ 添加球员</button>
+            <div id="player_stats"></div>
+        </div>
+
+        <!-- 荣誉管理 -->
+        <div class="section">
+            <h2>名人堂荣誉</h2>
+            <button class="btn add-btn" onclick="addHonor()">+ 添加荣誉</button>
+            <div id="honors"></div>
+        </div>
+
+        <!-- 历史 -->
+        <div class="section">
+            <h2>球队历史</h2>
+            <button class="btn add-btn" onclick="addHistory()">+ 添加历史事件</button>
+            <div id="history"></div>
+        </div>
+
+        <button class="btn btn-save" onclick="saveAll()">保存所有修改</button>
+    </div>
+
+    <div id="message"></div>
+
+    <script>
+        let data = {{ data | tojson }};
+
+        function render() {
+            document.getElementById('team_name').value = data.team_name;
+            document.getElementById('team_name_en').value = data.team_name_en;
+            document.getElementById('slogan').value = data.slogan;
+            document.getElementById('stats_games').value = data.stats.games;
+            document.getElementById('stats_win_rate').value = data.stats.win_rate;
+            document.getElementById('stats_championships').value = data.stats.championships;
+            document.getElementById('stats_players').value = data.stats.players;
+
+            renderList('legends', data.legends, ['name', 'position', 'years']);
+            renderList('schedule', data.schedule, ['date', 'home', 'away', 'location']);
+            renderList('player_stats', data.player_stats, ['name', 'points', 'rebounds', 'assists', 'fg']);
+            renderList('honors', data.honors, ['year', 'title', 'desc']);
+            renderList('history', data.history, ['year', 'title', 'desc']);
+        }
+
+        function renderList(containerId, items, fields) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            items.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                let html = '';
+                fields.forEach(field => {
+                    html += `<div class="form-group">
+                        <label>${field}</label>
+                        <input type="text" data-field="${field}" data-index="${index}" value="${item[field] || ''}">
+                    </div>`;
+                });
+                html += `<button class="delete-btn" onclick="deleteItem('${containerId}', ${index})">删除</button>`;
+                div.innerHTML = html;
+                container.appendChild(div);
+            });
+        }
+
+        function addLegend() { data.legends.push({name: '', position: '', years: ''}); renderList('legends', data.legends, ['name', 'position', 'years']); }
+        function addSchedule() { data.schedule.push({date: '', home: '', away: '', location: ''}); renderList('schedule', data.schedule, ['date', 'home', 'away', 'location']); }
+        function addPlayer() { data.player_stats.push({name: '', points: '', rebounds: '', assists: '', fg: ''}); renderList('player_stats', data.player_stats, ['name', 'points', 'rebounds', 'assists', 'fg']); }
+        function addHonor() { data.honors.push({year: '', title: '', desc: ''}); renderList('honors', data.honors, ['year', 'title', 'desc']); }
+        function addHistory() { data.history.push({year: '', title: '', desc: ''}); renderList('history', data.history, ['year', 'title', 'desc']); }
+
+        function deleteItem(containerId, index) {
+            const map = {
+                'legends': 'legends',
+                'schedule': 'schedule',
+                'player_stats': 'player_stats',
+                'honors': 'honors',
+                'history': 'history'
+            };
+            data[map[containerId]].splice(index, 1);
+            renderList(containerId, data[map[containerId]], getFields(containerId));
+        }
+
+        function getFields(containerId) {
+            const fields = {
+                'legends': ['name', 'position', 'years'],
+                'schedule': ['date', 'home', 'away', 'location'],
+                'player_stats': ['name', 'points', 'rebounds', 'assists', 'fg'],
+                'honors': ['year', 'title', 'desc'],
+                'history': ['year', 'title', 'desc']
+            };
+            return fields[containerId];
+        }
+
+        function saveAll() {
+            data.team_name = document.getElementById('team_name').value;
+            data.team_name_en = document.getElementById('team_name_en').value;
+            data.slogan = document.getElementById('slogan').value;
+            data.stats.games = document.getElementById('stats_games').value;
+            data.stats.win_rate = document.getElementById('stats_win_rate').value;
+            data.stats.championships = document.getElementById('stats_championships').value;
+            data.stats.players = document.getElementById('stats_players').value;
+
+            ['legends', 'schedule', 'player_stats', 'honors', 'history'].forEach(key => {
+                const container = document.getElementById(key);
+                const inputs = container.querySelectorAll('input');
+                const fields = getFields(key);
+                data[key] = [];
+                for (let i = 0; i < inputs.length; i += fields.length) {
+                    let obj = {};
+                    fields.forEach((field, j) => {
+                        obj[field] = inputs[i + j].value;
+                    });
+                    if (obj[fields[0]]) data[key].push(obj);
+                }
+            });
+
+            fetch('/api/update', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            })
+            .then(r => r.json())
+            .then(r => {
+                showMessage(r.success ? '保存成功！' : '保存失败', r.success ? 'success' : 'error');
+            });
+        }
+
+        function showMessage(text, type) {
+            const msg = document.getElementById('message');
+            msg.textContent = text;
+            msg.className = type;
+            setTimeout(() => msg.className = '', 3000);
+        }
+
+        render();
+    </script>
+</body>
+</html>
