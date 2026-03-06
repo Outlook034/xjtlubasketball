@@ -41,3 +41,34 @@ if (window.innerWidth <= 768) {
     navUl.style.flexDirection = 'column';
     navUl.style.alignItems = 'center';
 }
+
+// 留言提交
+function submitMessage() {
+    const name = document.getElementById('msg-name').value.trim();
+    const content = document.getElementById('msg-content').value.trim();
+    
+    if (!content) {
+        alert('请输入留言内容');
+        return;
+    }
+    
+    const now = new Date();
+    const time = now.getFullYear() + '-' + 
+        String(now.getMonth()+1).padStart(2,'0') + '-' + 
+        String(now.getDate()).padStart(2,'0');
+    
+    fetch('/api/message', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({name: name || '匿名', content: content, time: time})
+    })
+    .then(r => r.json())
+    .then(r => {
+        if (r.success) {
+            alert('留言成功！');
+            location.reload();
+        } else {
+            alert('留言失败，请重试');
+        }
+    });
+}

@@ -45,7 +45,14 @@ def default_data():
         ],
         "history": [
             {"year": "2015", "title": "球队成立", "desc": "西交利物浦大学篮球队正式成立"}
-        ]
+        ],
+        "players": [
+            {"name": "球员姓名", "number": "10", "position": "后卫", "height": "180cm", "weight": "70kg", "bio": "球员简介", "photo": ""}
+        ],
+        "gallery": [
+            {"title": "训练照片", "url": "", "desc": ""}
+        ],
+        "messages": []
     }
 
 @app.route('/')
@@ -86,6 +93,22 @@ def update_data():
     new_data = request.json
     save_data(new_data)
     return jsonify({'success': True})
+
+@app.route('/api/message', methods=['POST'])
+def add_message():
+    data = request.json
+    name = data.get('name', '匿名')
+    content = data.get('content', '')
+    if content:
+        current_data = load_data()
+        current_data['messages'].insert(0, {
+            'name': name,
+            'content': content,
+            'time': data.get('time', '')
+        })
+        save_data(current_data)
+        return jsonify({'success': True})
+    return jsonify({'success': False})
 
 if __name__ == '__main__':
     if not os.path.exists(DATA_FILE):

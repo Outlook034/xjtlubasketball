@@ -21,6 +21,9 @@
                 <li><a href="#stats">比赛统计</a></li>
                 <li><a href="#hall">名人堂</a></li>
                 <li><a href="#history">历史</a></li>
+                <li><a href="#players">球员名单</a></li>
+                <li><a href="#gallery">相册</a></li>
+                <li><a href="#message-board">留言</a></li>
                 <li><a href="/login" style="color: #c9a227;">管理</a></li>
             </ul>
         </nav>
@@ -158,6 +161,67 @@
                             <h3>{{ item.title }}</h3>
                             <p>{{ item.desc }}</p>
                         </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 球员名单详情 -->
+        <section id="players">
+            <div class="container">
+                <h2>球员名单</h2>
+                <p class="section-desc">现役球员</p>
+                <div class="grid">
+                    {% for player in data.players %}
+                    <div class="card player-card">
+                        <div class="player-photo"></div>
+                        <h3>{{ player.name }}</h3>
+                        <p class="player-number">#{{ player.number }}</p>
+                        <p class="player-position">{{ player.position }}</p>
+                        <p class="player-info">身高: {{ player.height }} | 体重: {{ player.weight }}</p>
+                        <p class="player-bio">{{ player.bio }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 相册 -->
+        <section id="gallery">
+            <div class="container">
+                <h2>相册</h2>
+                <p class="section-desc">球队照片</p>
+                <div class="gallery-grid">
+                    {% for photo in data.gallery %}
+                    <div class="gallery-item">
+                        <div class="gallery-photo"></div>
+                        <p class="gallery-title">{{ photo.title }}</p>
+                        <p class="gallery-desc">{{ photo.desc }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 留言板 -->
+        <section id="message-board">
+            <div class="container">
+                <h2>留言板</h2>
+                <p class="section-desc">欢迎留言</p>
+                <div class="message-form">
+                    <input type="text" id="msg-name" placeholder="你的名字">
+                    <textarea id="msg-content" placeholder="写下你想说的话..."></textarea>
+                    <button class="btn" onclick="submitMessage()">提交留言</button>
+                </div>
+                <div class="message-list" id="message-list">
+                    {% for msg in data.messages %}
+                    <div class="message-item">
+                        <div class="message-header">
+                            <span class="message-name">{{ msg.name }}</span>
+                            <span class="message-time">{{ msg.time }}</span>
+                        </div>
+                        <div class="message-content">{{ msg.content }}</div>
                     </div>
                     {% endfor %}
                 </div>

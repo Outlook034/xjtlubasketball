@@ -448,3 +448,145 @@ footer .contact {
         left: 60px;
     }
 }
+
+/* Player Card */
+.player-card {
+    text-align: center;
+}
+
+.player-photo {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ddd, #eee);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+.player-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.player-position {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin: 5px 0;
+}
+
+.player-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.player-bio {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-photo {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #ddd, #eee);
+}
+
+.gallery-title {
+    padding: 15px 15px 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.gallery-desc {
+    padding: 5px 15px 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Message Board */
+.message-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.message-form input,
+.message-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.message-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.message-form .btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.message-form .btn:hover {
+    background: var(--accent);
+}
+
+.message-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.message-name {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.message-time {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.message-content {
+    color: #333;
+    line-height: 1.6;
+}

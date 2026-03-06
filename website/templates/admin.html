@@ -217,6 +217,26 @@
             <div id="history"></div>
         </div>
 
+        <!-- 球员名单详情 -->
+        <div class="section">
+            <h2>球员名单详情</h2>
+            <button class="btn add-btn" onclick="addPlayers()">+ 添加球员</button>
+            <div id="players"></div>
+        </div>
+
+        <!-- 相册 -->
+        <div class="section">
+            <h2>相册图库</h2>
+            <button class="btn add-btn" onclick="addGallery()">+ 添加照片</button>
+            <div id="gallery"></div>
+        </div>
+
+        <!-- 留言管理 -->
+        <div class="section">
+            <h2>留言管理</h2>
+            <div id="messages"></div>
+        </div>
+
         <button class="btn btn-save" onclick="saveAll()">保存所有修改</button>
     </div>
 
@@ -239,6 +259,27 @@
             renderList('player_stats', data.player_stats, ['name', 'points', 'rebounds', 'assists', 'fg']);
             renderList('honors', data.honors, ['year', 'title', 'desc']);
             renderList('history', data.history, ['year', 'title', 'desc']);
+            renderList('players', data.players || [], ['name', 'number', 'position', 'height', 'weight', 'bio']);
+            renderList('gallery', data.gallery || [], ['title', 'url', 'desc']);
+            renderMessages();
+        }
+
+        function renderMessages() {
+            const container = document.getElementById('messages');
+            container.innerHTML = '';
+            (data.messages || []).forEach((msg, index) => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+                    <div class="form-group"><label>姓名</label><input type="text" data-field="name" data-index="${index}" value="${msg.name || ''}"></div>
+                    <div class="form-group"><label>内容</label><textarea data-field="content" data-index="${index}">${msg.content || ''}</textarea></div>
+                    <button class="delete-btn" onclick="deleteItem('messages', ${index})">删除</button>
+                `;
+                container.appendChild(div);
+            });
+            if (data.messages.length === 0) {
+                container.innerHTML = '<p style="color:#666">暂无留言</p>';
+            }
         }
 
         function renderList(containerId, items, fields) {
@@ -265,6 +306,8 @@
         function addPlayer() { data.player_stats.push({name: '', points: '', rebounds: '', assists: '', fg: ''}); renderList('player_stats', data.player_stats, ['name', 'points', 'rebounds', 'assists', 'fg']); }
         function addHonor() { data.honors.push({year: '', title: '', desc: ''}); renderList('honors', data.honors, ['year', 'title', 'desc']); }
         function addHistory() { data.history.push({year: '', title: '', desc: ''}); renderList('history', data.history, ['year', 'title', 'desc']); }
+        function addPlayers() { if (!data.players) data.players = []; data.players.push({name: '', number: '', position: '', height: '', weight: '', bio: ''}); renderList('players', data.players, ['name', 'number', 'position', 'height', 'weight', 'bio']); }
+        function addGallery() { if (!data.gallery) data.gallery = []; data.gallery.push({title: '', url: '', desc: ''}); renderList('gallery', data.gallery, ['title', 'url', 'desc']); }
 
         function deleteItem(containerId, index) {
             const map = {
@@ -272,10 +315,18 @@
                 'schedule': 'schedule',
                 'player_stats': 'player_stats',
                 'honors': 'honors',
-                'history': 'history'
+                'history': 'history',
+                'players': 'players',
+                'gallery': 'gallery',
+                'messages': 'messages'
             };
-            data[map[containerId]].splice(index, 1);
-            renderList(containerId, data[map[containerId]], getFields(containerId));
+            if (containerId === 'messages') {
+                data.messages.splice(index, 1);
+                renderMessages();
+            } else {
+                data[map[containerId]].splice(index, 1);
+                renderList(containerId, data[map[containerId]], getFields(containerId));
+            }
         }
 
         function getFields(containerId) {
@@ -284,7 +335,9 @@
                 'schedule': ['date', 'home', 'away', 'location'],
                 'player_stats': ['name', 'points', 'rebounds', 'assists', 'fg'],
                 'honors': ['year', 'title', 'desc'],
-                'history': ['year', 'title', 'desc']
+                'history': ['year', 'title', 'desc'],
+                'players': ['name', 'number', 'position', 'height', 'weight', 'bio'],
+                'gallery': ['title', 'url', 'desc']
             };
             return fields[containerId];
         }
@@ -298,7 +351,7 @@
             data.stats.championships = document.getElementById('stats_championships').value;
             data.stats.players = document.getElementById('stats_players').value;
 
-            ['legends', 'schedule', 'player_stats', 'honors', 'history'].forEach(key => {
+            ['legends', 'schedule', 'player_stats', 'honors', 'history', 'players', 'gallery'].forEach(key => {
                 const container = document.getElementById(key);
                 const inputs = container.querySelectorAll('input');
                 const fields = getFields(key);
@@ -311,6 +364,14 @@
                     if (obj[fields[0]]) data[key].push(obj);
                 }
             });
+
+            const msgContainers = document.getElementById('messages');
+            const msgInputs = msgContainers.querySelectorAll('input, textarea');
+            data.messages = [];
+            for (let i = 0; i < msgInputs.length; i += 2) {
+                let obj = {name: msgInputs[i].value, content: msgInputs[i+1] ? msgInputs[i+1].value : ''};
+                if (obj.name) data.messages.push(obj);
+            }
 
             fetch('/api/update', {
                 method: 'POST',
