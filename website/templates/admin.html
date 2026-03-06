@@ -319,13 +319,13 @@
                         </div>`;
                     }
                     html += `<div class="form-group">
-                        <label>图片链接URL</label>
-                        <input type="text" data-field="url" data-index="${index}" value="${item.url || ''}" placeholder="输入图片链接地址，如 https://xxx.com/photo.jpg">
+                        <label>上传相册图片</label>
+                        <button class="btn upload-btn" onclick="uploadImage(${index}, '${containerId}')">选择图片</button>
                     </div>`;
                 }
                 
                 fields.forEach(field => {
-                    if (containerId === 'players' && field === 'photo') return;
+                    if (skipField(containerId, field)) return;
                     html += `<div class="form-group">
                         <label>${field}</label>
                         <input type="text" data-field="${field}" data-index="${index}" value="${item[field] || ''}">
@@ -376,6 +376,10 @@
                 'gallery': ['title', 'url', 'desc']
             };
             return fields[containerId];
+        }
+
+        function skipField(containerId, field) {
+            return (containerId === 'players' && field === 'photo') || (containerId === 'gallery' && field === 'url');
         }
 
         function uploadImage(index, containerId) {
