@@ -7,7 +7,7 @@ app = Flask(__name__,
             static_folder='website/static')
 app.secret_key = 'xjtlubasketball2024'
 
-DATA_FILE = 'website/data.json'
+DATA_FILE = os.environ.get('DATA_FILE', 'website/data.json')
 
 def load_data():
     if os.path.exists(DATA_FILE):
@@ -112,6 +112,9 @@ def add_message():
     return jsonify({'success': False})
 
 if __name__ == '__main__':
+    import sys
+    if getattr(sys, 'frozen', False):
+        DATA_FILE = os.path.join(os.path.dirname(sys.executable), 'data.json')
     if not os.path.exists(DATA_FILE):
         save_data(default_data())
     port = int(os.environ.get('PORT', 5000))
