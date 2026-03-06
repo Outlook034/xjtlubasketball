@@ -55,7 +55,10 @@ def default_data():
         "gallery": [
             {"title": "训练照片", "url": "", "desc": ""}
         ],
-        "messages": []
+        "messages": [],
+        "rosters": [
+            {"year": "2025", "players": [{"name": "球员姓名", "number": "10", "position": "后卫"}]}
+        ]
     }
 
 @app.route('/')
@@ -63,6 +66,19 @@ def index():
     data = load_data()
     lang = request.args.get('lang', 'zh')
     return render_template('index.html', data=data, lang=lang)
+
+@app.route('/player/<name>')
+def player(name):
+    data = load_data()
+    lang = request.args.get('lang', 'zh')
+    player_data = None
+    for p in data.get('players', []):
+        if p.get('name') == name:
+            player_data = p
+            break
+    if not player_data:
+        return redirect(url_for('index'))
+    return render_template('player.html', player=player_data, data=data, lang=lang)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

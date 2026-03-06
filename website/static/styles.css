@@ -629,3 +629,75 @@ footer .contact {
     color: #333;
     line-height: 1.6;
 }
+
+/* Player link */
+.player-card h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.player-card h3 a:hover {
+    color: var(--secondary-color);
+}
+
+/* Roster */
+.roster-year {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.roster-year h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.roster-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.roster-player {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+.roster-player:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.roster-number {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.roster-player:hover .roster-number {
+    color: var(--secondary-color);
+}
+
+.roster-name {
+    font-weight: 500;
+}
+
+.roster-position {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.roster-player:hover .roster-position {
+    color: rgba(255,255,255,0.8);
+}

@@ -26,6 +26,7 @@
                 <li><a href="#hall">{% if lang == 'en' %}Hall of Fame{% else %}名人堂{% endif %}</a></li>
                 <li><a href="#history">{% if lang == 'en' %}History{% else %}历史{% endif %}</a></li>
                 <li><a href="#players">{% if lang == 'en' %}Roster{% else %}球员名单{% endif %}</a></li>
+                <li><a href="#rosters">{% if lang == 'en' %}Rosters{% else %}历年阵容{% endif %}</a></li>
                 <li><a href="#gallery">{% if lang == 'en' %}Gallery{% else %}相册{% endif %}</a></li>
                 <li><a href="#message-board">{% if lang == 'en' %}Guestbook{% else %}留言{% endif %}</a></li>
                 <li><a href="/login" style="color: #c9a227;">{% if lang == 'en' %}Admin{% else %}管理{% endif %}</a></li>
@@ -184,7 +185,7 @@
                         {% else %}
                         <div class="player-photo"></div>
                         {% endif %}
-                        <h3>{{ player.name }}</h3>
+                        <h3><a href="/player/{{ player.name }}?lang={{ lang }}">{{ player.name }}</a></h3>
                         <p class="player-number">#{{ player.number }}</p>
                         <p class="player-position">{{ player.position }}</p>
                         <p class="player-info">{% if lang == 'en' %}Height:{% else %}身高:{% endif %} {{ player.height }} | {% if lang == 'en' %}Weight:{% else %}体重:{% endif %} {{ player.weight }}</p>
@@ -192,6 +193,28 @@
                     </div>
                     {% endfor %}
                 </div>
+            </div>
+        </section>
+
+        <!-- 年份阵容 -->
+        <section id="rosters">
+            <div class="container">
+                <h2>{% if lang == 'en' %}Team Rosters by Year{% else %}历年阵容{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Team roster history{% else %}球队历年阵容{% endif %}</p>
+                {% for roster in data.rosters %}
+                <div class="roster-year">
+                    <h3>{{ roster.year }}</h3>
+                    <div class="roster-list">
+                        {% for p in roster.players %}
+                        <a href="/player/{{ p.name }}?lang={{ lang }}" class="roster-player">
+                            <span class="roster-number">#{{ p.number }}</span>
+                            <span class="roster-name">{{ p.name }}</span>
+                            <span class="roster-position">{{ p.position }}</span>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </section>
 
