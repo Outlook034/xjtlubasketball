@@ -72,7 +72,7 @@
         }
         .btn {
             padding: 10px 20px;
-            background: #1a365d;
+            background: #4B0082;
             color: white;
             border: none;
             border-radius: 5px;
@@ -80,14 +80,19 @@
             font-size: 1rem;
         }
         .btn:hover {
-            background: #2c5282;
+            background: #6A0DAD;
         }
         .btn-save {
-            background: #c9a227;
+            background: #FFD700;
+            color: #4B0082;
             margin-top: 20px;
         }
         .btn-save:hover {
-            background: #b8941f;
+            background: #FFC000;
+        }
+        .upload-btn {
+            background: #6A0DAD;
+            margin-top: 10px;
         }
         .item {
             background: #f9f9f9;
@@ -292,7 +297,23 @@
                 const div = document.createElement('div');
                 div.className = 'item';
                 let html = '';
+                
+                if (containerId === 'players' || containerId === 'gallery') {
+                    const photoUrl = containerId === 'players' ? (item.photo || '') : (item.url || '');
+                    if (photoUrl) {
+                        html += `<div class="form-group">
+                            <label>预览</label>
+                            <img src="${photoUrl}" style="max-width:150px;max-height:150px;border-radius:8px;">
+                        </div>`;
+                    }
+                    html += `<div class="form-group">
+                        <label>上传${containerId === 'players' ? '球员照片' : '图片'}</label>
+                        <button class="btn upload-btn" onclick="uploadImage(${index}, '${containerId}')">选择图片</button>
+                    </div>`;
+                }
+                
                 fields.forEach(field => {
+                    if (containerId === 'players' && field === 'photo') return;
                     html += `<div class="form-group">
                         <label>${field}</label>
                         <input type="text" data-field="${field}" data-index="${index}" value="${item[field] || ''}">
@@ -309,7 +330,7 @@
         function addPlayer() { data.player_stats.push({name: '', points: '', rebounds: '', assists: '', fg: ''}); renderList('player_stats', data.player_stats, ['name', 'points', 'rebounds', 'assists', 'fg']); }
         function addHonor() { data.honors.push({year: '', title: '', desc: ''}); renderList('honors', data.honors, ['year', 'title', 'desc']); }
         function addHistory() { data.history.push({year: '', title: '', desc: ''}); renderList('history', data.history, ['year', 'title', 'desc']); }
-        function addPlayers() { if (!data.players) data.players = []; data.players.push({name: '', number: '', position: '', height: '', weight: '', bio: ''}); renderList('players', data.players, ['name', 'number', 'position', 'height', 'weight', 'bio']); }
+        function addPlayers() { if (!data.players) data.players = []; data.players.push({name: '', number: '', position: '', height: '', weight: '', bio: '', photo: ''}); renderList('players', data.players, ['name', 'number', 'position', 'height', 'weight', 'bio', 'photo']); }
         function addGallery() { if (!data.gallery) data.gallery = []; data.gallery.push({title: '', url: '', desc: ''}); renderList('gallery', data.gallery, ['title', 'url', 'desc']); }
 
         function deleteItem(containerId, index) {
@@ -339,10 +360,45 @@
                 'player_stats': ['name', 'points', 'rebounds', 'assists', 'fg'],
                 'honors': ['year', 'title', 'desc'],
                 'history': ['year', 'title', 'desc'],
-                'players': ['name', 'number', 'position', 'height', 'weight', 'bio'],
+                'players': ['name', 'number', 'position', 'height', 'weight', 'bio', 'photo'],
                 'gallery': ['title', 'url', 'desc']
             };
             return fields[containerId];
+        }
+
+        function uploadImage(index, containerId) {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                
+                const formData = new FormData();
+                formData.append('image', file);
+                
+                try {
+                    const response = await fetch('/api/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const result = await response.json();
+                    if (result.success) {
+                        if (containerId === 'players') {
+                            data.players[index].photo = result.url;
+                            renderList('players', data.players, getFields('players'));
+                        } else if (containerId === 'gallery') {
+                            data.gallery[index].url = result.url;
+                            renderList('gallery', data.gallery, getFields('gallery'));
+                        }
+                    } else {
+                        alert('上传失败: ' + result.message);
+                    }
+                } catch (err) {
+                    alert('上传失败');
+                }
+            };
+            input.click();
         }
 
         function saveAll() {

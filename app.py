@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import json
 import os
+import base64
+import uuid
 
 app = Flask(__name__, 
             template_folder='website/templates',
             static_folder='website/static')
 app.secret_key = 'xjtlubasketball2024'
+app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024
 
 DATA_FILE = os.environ.get('DATA_FILE', 'website/data.json')
 
@@ -109,6 +112,24 @@ def add_message():
         })
         save_data(current_data)
         return jsonify({'success': True})
+
+@app.route('/api/upload', methods=['POST'])
+def upload_image():
+    if 'image' not in request.files:
+        return jsonify({'success': False, 'message': 'No image'}), 400
+    
+    file = request.files['image']
+    if file.filename == '':
+        return jsonify({'success': False, 'message': 'No image'}), 400
+    
+    if file:
+        ext = file.filename.split('.')[-1].lower()
+        if ext not in ['jpg', 'jpeg', 'png', 'gif', 'webp']:
+            return jsonify({'success': False, 'message': 'Invalid type'}), 400
+        
+        img_data = base64.b64encode(file.read()).decode('utf-8')
+        data_url = f"data:image/{ext};base64,{img_data}"
+        return jsonify({'success': True, 'url': data_url})
     return jsonify({'success': False})
 
 if __name__ == '__main__':

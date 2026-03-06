@@ -179,7 +179,11 @@
                 <div class="grid">
                     {% for player in data.players %}
                     <div class="card player-card">
+                        {% if player.photo %}
+                        <img src="{{ player.photo }}" class="player-photo-img" alt="{{ player.name }}">
+                        {% else %}
                         <div class="player-photo"></div>
+                        {% endif %}
                         <h3>{{ player.name }}</h3>
                         <p class="player-number">#{{ player.number }}</p>
                         <p class="player-position">{{ player.position }}</p>
@@ -199,7 +203,11 @@
                 <div class="gallery-grid">
                     {% for photo in data.gallery %}
                     <div class="gallery-item">
+                        {% if photo.url %}
+                        <img src="{{ photo.url }}" class="gallery-photo-img" alt="{{ photo.title }}">
+                        {% else %}
                         <div class="gallery-photo"></div>
+                        {% endif %}
                         <p class="gallery-title">{{ photo.title }}</p>
                         <p class="gallery-desc">{{ photo.desc }}</p>
                     </div>
