@@ -58,6 +58,8 @@ def default_data():
 @app.route('/')
 def index():
     data = load_data()
+    lang = request.args.get('lang', 'zh')
+    return render_template('index.html', data=data, lang=lang)
     return render_template('index.html', data=data)
 
 @app.route('/login', methods=['GET', 'POST'])

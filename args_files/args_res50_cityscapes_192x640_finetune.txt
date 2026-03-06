@@ -1,0 +1,18 @@
+--data_path ../autodl-tmp/cityscapes/
+--dataset cityscapes_preprocessed 
+--split cityscapes_preprocessed 
+--eval_split cityscapes 
+--height 192 
+--width 640
+--batch_size 16
+--num_epochs 5
+--model_dim 64
+--patch_size 16
+--query_nums 120
+--pretrained_pose
+--pose_net_path ../autodl-tmp/Cityscapes_models/pose.pth
+--min_depth 0.001
+--max_depth 80.0
+--learning_rate 1e-6
+
+

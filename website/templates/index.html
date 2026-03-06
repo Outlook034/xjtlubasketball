@@ -1,30 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ data.team_name }}</title>
+    <title>{% if lang == 'en' %}{{ data.team_name_en }}{% else %}{{ data.team_name }}{% endif %}</title>
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>{{ data.team_name_en }}</h1>
-            <p class="subtitle">{{ data.team_name }}</p>
+            <div class="lang-toggle">
+                <a href="/?lang=zh" class="{{ 'active' if lang == 'zh' else '' }}">中文</a>
+                <a href="/?lang=en" class="{{ 'active' if lang == 'en' else '' }}">EN</a>
+            </div>
+            <h1>{% if lang == 'en' %}{{ data.team_name_en }}{% else %}{{ data.team_name }}{% endif %}</h1>
+            <p class="subtitle">{% if lang == 'en' %}{{ data.team_name }}{% else %}{{ data.team_name_en }}{% endif %}</p>
         </div>
         <nav>
             <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#legends">名宿</a></li>
-                <li><a href="#data">数据</a></li>
-                <li><a href="#schedule">赛程</a></li>
-                <li><a href="#stats">比赛统计</a></li>
-                <li><a href="#hall">名人堂</a></li>
-                <li><a href="#history">历史</a></li>
-                <li><a href="#players">球员名单</a></li>
-                <li><a href="#gallery">相册</a></li>
-                <li><a href="#message-board">留言</a></li>
-                <li><a href="/login" style="color: #c9a227;">管理</a></li>
+                <li><a href="#home">{% if lang == 'en' %}Home{% else %}首页{% endif %}</a></li>
+                <li><a href="#legends">{% if lang == 'en' %}Legends{% else %}名宿{% endif %}</a></li>
+                <li><a href="#data">{% if lang == 'en' %}Statistics{% else %}数据{% endif %}</a></li>
+                <li><a href="#schedule">{% if lang == 'en' %}Schedule{% else %}赛程{% endif %}</a></li>
+                <li><a href="#stats">{% if lang == 'en' %}Stats{% else %}比赛统计{% endif %}</a></li>
+                <li><a href="#hall">{% if lang == 'en' %}Hall of Fame{% else %}名人堂{% endif %}</a></li>
+                <li><a href="#history">{% if lang == 'en' %}History{% else %}历史{% endif %}</a></li>
+                <li><a href="#players">{% if lang == 'en' %}Roster{% else %}球员名单{% endif %}</a></li>
+                <li><a href="#gallery">{% if lang == 'en' %}Gallery{% else %}相册{% endif %}</a></li>
+                <li><a href="#message-board">{% if lang == 'en' %}Guestbook{% else %}留言{% endif %}</a></li>
+                <li><a href="/login" style="color: #c9a227;">{% if lang == 'en' %}Admin{% else %}管理{% endif %}</a></li>
             </ul>
         </nav>
     </header>
@@ -32,18 +36,18 @@
     <main>
         <section id="home" class="hero">
             <div class="container">
-                <h2>欢迎来到{{ data.team_name }}</h2>
+                <h2>{% if lang == 'en' %}Welcome to{% else %}欢迎来到{% endif %}{{ data.team_name }}</h2>
                 <p class="hero-text">{{ data.slogan }}</p>
                 <div class="team-photo">
-                    <div class="photo-placeholder">球队合照</div>
+                    <div class="photo-placeholder">{% if lang == 'en' %}Team Photo{% else %}球队合照{% endif %}</div>
                 </div>
             </div>
         </section>
 
         <section id="legends">
             <div class="container">
-                <h2>名宿</h2>
-                <p class="section-desc">传奇球员，永远的榜样</p>
+                <h2>{% if lang == 'en' %}Legends{% else %}名宿{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Legendary players, eternal role models{% else %}传奇球员，永远的榜样{% endif %}</p>
                 <div class="grid">
                     {% for legend in data.legends %}
                     <div class="card">
@@ -59,24 +63,24 @@
 
         <section id="data">
             <div class="container">
-                <h2>球队数据</h2>
-                <p class="section-desc">各项统计数据一览</p>
+                <h2>{% if lang == 'en' %}Team Statistics{% else %}球队数据{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Team statistics overview{% else %}各项统计数据一览{% endif %}</p>
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-number">{{ data.stats.games }}</div>
-                        <div class="stat-label">比赛场次</div>
+                        <div class="stat-label">{% if lang == 'en' %}Games{% else %}比赛场次{% endif %}</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-number">{{ data.stats.win_rate }}</div>
-                        <div class="stat-label">胜率</div>
+                        <div class="stat-label">{% if lang == 'en' %}Win Rate{% else %}胜率{% endif %}</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-number">{{ data.stats.championships }}</div>
-                        <div class="stat-label">冠军</div>
+                        <div class="stat-label">{% if lang == 'en' %}Championships{% else %}冠军{% endif %}</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-number">{{ data.stats.players }}</div>
-                        <div class="stat-label">球员总数</div>
+                        <div class="stat-label">{% if lang == 'en' %}Total Players{% else %}球员总数{% endif %}</div>
                     </div>
                 </div>
             </div>
@@ -84,8 +88,8 @@
 
         <section id="schedule">
             <div class="container">
-                <h2>赛程</h2>
-                <p class="section-desc">Upcoming Matches</p>
+                <h2>{% if lang == 'en' %}Schedule{% else %}赛程{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Upcoming Matches{% else %}近期比赛{% endif %}</p>
                 <div class="schedule-list">
                     {% for match in data.schedule %}
                     <div class="schedule-item">
@@ -95,7 +99,7 @@
                             <span class="vs">vs</span>
                             <span class="team">{{ match.away }}</span>
                         </div>
-                        <div class="match-location">{{ match.location }}</div>
+                        <div class="match-location">{% if lang == 'en' %}{% if match.location == '主场' %}Home{% elif match.location == '客场' %}Away{% else %}{{ match.location }}{% endif %}{% else %}{{ match.location }}{% endif %}</div>
                     </div>
                     {% endfor %}
                 </div>
@@ -104,16 +108,16 @@
 
         <section id="stats">
             <div class="container">
-                <h2>比赛统计</h2>
-                <p class="section-desc">球员个人数据</p>
+                <h2>{% if lang == 'en' %}Player Stats{% else %}比赛统计{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Player statistics{% else %}球员个人数据{% endif %}</p>
                 <table class="stats-table">
                     <thead>
                         <tr>
-                            <th>球员</th>
-                            <th>场均得分</th>
-                            <th>场均篮板</th>
-                            <th>场均助攻</th>
-                            <th>投篮命中率</th>
+                            <th>{% if lang == 'en' %}Player{% else %}球员{% endif %}</th>
+                            <th>{% if lang == 'en' %}PPG{% else %}场均得分{% endif %}</th>
+                            <th>{% if lang == 'en' %}RPG{% else %}场均篮板{% endif %}</th>
+                            <th>{% if lang == 'en' %}APG{% else %}场均助攻{% endif %}</th>
+                            <th>{% if lang == 'en' %}FG%{% else %}投篮命中率{% endif %}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -133,8 +137,8 @@
 
         <section id="hall">
             <div class="container">
-                <h2>名人堂</h2>
-                <p class="section-desc">荣誉与成就</p>
+                <h2>{% if lang == 'en' %}Hall of Fame{% else %}名人堂{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Honors and achievements{% else %}荣誉与成就{% endif %}</p>
                 <div class="hall-of-fame">
                     {% for honor in data.honors %}
                     <div class="honor-item">
@@ -151,8 +155,8 @@
 
         <section id="history">
             <div class="container">
-                <h2>球队历史</h2>
-                <p class="section-desc">传承与荣耀</p>
+                <h2>{% if lang == 'en' %}History{% else %}球队历史{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Legacy and glory{% else %}传承与荣耀{% endif %}</p>
                 <div class="timeline">
                     {% for item in data.history %}
                     <div class="timeline-item">
@@ -170,8 +174,8 @@
         <!-- 球员名单详情 -->
         <section id="players">
             <div class="container">
-                <h2>球员名单</h2>
-                <p class="section-desc">现役球员</p>
+                <h2>{% if lang == 'en' %}Roster{% else %}球员名单{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Current players{% else %}现役球员{% endif %}</p>
                 <div class="grid">
                     {% for player in data.players %}
                     <div class="card player-card">
@@ -179,7 +183,7 @@
                         <h3>{{ player.name }}</h3>
                         <p class="player-number">#{{ player.number }}</p>
                         <p class="player-position">{{ player.position }}</p>
-                        <p class="player-info">身高: {{ player.height }} | 体重: {{ player.weight }}</p>
+                        <p class="player-info">{% if lang == 'en' %}Height:{% else %}身高:{% endif %} {{ player.height }} | {% if lang == 'en' %}Weight:{% else %}体重:{% endif %} {{ player.weight }}</p>
                         <p class="player-bio">{{ player.bio }}</p>
                     </div>
                     {% endfor %}
@@ -190,8 +194,8 @@
         <!-- 相册 -->
         <section id="gallery">
             <div class="container">
-                <h2>相册</h2>
-                <p class="section-desc">球队照片</p>
+                <h2>{% if lang == 'en' %}Gallery{% else %}相册{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Team photos{% else %}球队照片{% endif %}</p>
                 <div class="gallery-grid">
                     {% for photo in data.gallery %}
                     <div class="gallery-item">
@@ -207,12 +211,12 @@
         <!-- 留言板 -->
         <section id="message-board">
             <div class="container">
-                <h2>留言板</h2>
-                <p class="section-desc">欢迎留言</p>
+                <h2>{% if lang == 'en' %}Guestbook{% else %}留言板{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Leave a message{% else %}欢迎留言{% endif %}</p>
                 <div class="message-form">
-                    <input type="text" id="msg-name" placeholder="你的名字">
-                    <textarea id="msg-content" placeholder="写下你想说的话..."></textarea>
-                    <button class="btn" onclick="submitMessage()">提交留言</button>
+                    <input type="text" id="msg-name" placeholder="{% if lang == 'en' %}Your name{% else %}你的名字{% endif %}">
+                    <textarea id="msg-content" placeholder="{% if lang == 'en' %}Write your message...{% else %}写下你想说的话...{% endif %}"></textarea>
+                    <button class="btn" onclick="submitMessage()">{% if lang == 'en' %}Submit{% else %}提交留言{% endif %}</button>
                 </div>
                 <div class="message-list" id="message-list">
                     {% for msg in data.messages %}
@@ -231,8 +235,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 {{ data.team_name }} | {{ data.team_name_en }}</p>
-            <p class="contact">联系我们: xjtlubasketball@example.com</p>
+            <p>&copy; 2026 {% if lang == 'en' %}{{ data.team_name_en }}{% else %}{{ data.team_name }}{% endif %}</p>
+            <p class="contact">{% if lang == 'en' %}Contact:{% else %}联系我们:{% endif %} xjtlubasketball@example.com</p>
         </div>
     </footer>
 

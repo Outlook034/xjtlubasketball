@@ -1,0 +1,1379 @@
+(lite-mono) root@autodl-container-e7fa45a3ae-2df5a22c:~/SfMNeXt-Impl# python batch_eval_kitti_corruptions.py
+Evaluating dark severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.702 | std: 0.085
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.126  &   1.042  &   5.051  &   0.214  &   0.850  &   0.942  &   0.971  \\
+
+-> Done!
+Evaluating dark severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.788 | std: 0.092
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.143  &   1.135  &   5.371  &   0.233  &   0.815  &   0.929  &   0.966  \\
+
+-> Done!
+Evaluating dark severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.098 | std: 0.121
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.185  &   1.434  &   6.182  &   0.278  &   0.722  &   0.895  &   0.954  \\
+
+-> Done!
+Evaluating dark severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.873 | std: 0.255
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.304  &   2.667  &   8.236  &   0.386  &   0.481  &   0.773  &   0.911  \\
+
+-> Done!
+Evaluating dark severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 11.113 | std: 0.218
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.384  &   3.567  &   9.966  &   0.475  &   0.366  &   0.661  &   0.851  \\
+
+-> Done!
+Evaluating snow severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.893 | std: 0.212
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.198  &   1.917  &   6.160  &   0.288  &   0.721  &   0.881  &   0.942  \\
+
+-> Done!
+Evaluating snow severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 8.844 | std: 0.354
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.436  &   5.730  &  10.877  &   0.499  &   0.352  &   0.635  &   0.822  \\
+
+-> Done!
+Evaluating snow severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 8.117 | std: 0.371
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.407  &   5.228  &  10.196  &   0.480  &   0.389  &   0.666  &   0.837  \\
+
+-> Done!
+Evaluating snow severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 10.101 | std: 0.335
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.491  &   6.906  &  11.948  &   0.551  &   0.298  &   0.573  &   0.779  \\
+
+-> Done!
+Evaluating snow severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 9.376 | std: 0.332
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.470  &   6.321  &  11.545  &   0.540  &   0.309  &   0.593  &   0.795  \\
+
+-> Done!
+Evaluating color_quant severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.499 | std: 0.070
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.090  &   0.754  &   4.278  &   0.169  &   0.917  &   0.968  &   0.983  \\
+
+-> Done!
+Evaluating color_quant severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.494 | std: 0.071
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.092  &   0.772  &   4.322  &   0.170  &   0.913  &   0.967  &   0.983  \\
+
+-> Done!
+Evaluating color_quant severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.555 | std: 0.074
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.102  &   0.830  &   4.516  &   0.181  &   0.896  &   0.962  &   0.982  \\
+
+-> Done!
+Evaluating color_quant severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.837 | std: 0.115
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.158  &   1.304  &   5.585  &   0.237  &   0.786  &   0.929  &   0.971  \\
+
+-> Done!
+Evaluating color_quant severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.517 | std: 0.219
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.318  &   3.085  &   8.588  &   0.394  &   0.458  &   0.773  &   0.912  \\
+
+-> Done!
+Evaluating fog severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.486 | std: 0.077
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.104  &   0.858  &   4.576  &   0.183  &   0.892  &   0.961  &   0.981  \\
+
+-> Done!
+Evaluating fog severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.480 | std: 0.080
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.109  &   0.889  &   4.661  &   0.189  &   0.885  &   0.958  &   0.980  \\
+
+-> Done!
+Evaluating fog severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.493 | std: 0.083
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.116  &   0.924  &   4.760  &   0.195  &   0.870  &   0.954  &   0.979  \\
+
+-> Done!
+Evaluating fog severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.501 | std: 0.083
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.116  &   0.899  &   4.754  &   0.195  &   0.872  &   0.955  &   0.979  \\
+
+-> Done!
+Evaluating fog severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.555 | std: 0.091
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.129  &   0.998  &   4.983  &   0.207  &   0.846  &   0.948  &   0.978  \\
+
+-> Done!
+Evaluating frost severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.597 | std: 0.093
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.125  &   1.115  &   5.001  &   0.203  &   0.854  &   0.950  &   0.977  \\
+
+-> Done!
+Evaluating frost severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.828 | std: 0.134
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.172  &   1.424  &   5.867  &   0.256  &   0.754  &   0.911  &   0.960  \\
+
+-> Done!
+Evaluating frost severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.033 | std: 0.198
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.220  &   1.857  &   6.842  &   0.314  &   0.648  &   0.864  &   0.938  \\
+
+-> Done!
+Evaluating frost severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.131 | std: 0.219
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.228  &   1.943  &   6.955  &   0.325  &   0.637  &   0.855  &   0.933  \\
+
+-> Done!
+Evaluating frost severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.378 | std: 0.228
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.259  &   2.258  &   7.595  &   0.363  &   0.572  &   0.818  &   0.916  \\
+
+-> Done!
+Evaluating brightness severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.467 | std: 0.072
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.092  &   0.775  &   4.355  &   0.170  &   0.914  &   0.967  &   0.983  \\
+
+-> Done!
+Evaluating brightness severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.466 | std: 0.074
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.095  &   0.795  &   4.445  &   0.172  &   0.910  &   0.967  &   0.983  \\
+
+-> Done!
+Evaluating brightness severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.465 | std: 0.074
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.098  &   0.821  &   4.560  &   0.176  &   0.903  &   0.965  &   0.983  \\
+
+-> Done!
+Evaluating brightness severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.477 | std: 0.076
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.104  &   0.855  &   4.703  &   0.182  &   0.893  &   0.963  &   0.982  \\
+
+-> Done!
+Evaluating brightness severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.472 | std: 0.080
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.111  &   0.906  &   4.869  &   0.189  &   0.879  &   0.959  &   0.981  \\
+
+-> Done!
+Evaluating contrast severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.489 | std: 0.075
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.099  &   0.814  &   4.504  &   0.180  &   0.900  &   0.963  &   0.981  \\
+
+-> Done!
+Evaluating contrast severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.506 | std: 0.077
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.106  &   0.844  &   4.629  &   0.187  &   0.888  &   0.959  &   0.980  \\
+
+-> Done!
+Evaluating contrast severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.570 | std: 0.083
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.120  &   0.927  &   4.917  &   0.204  &   0.861  &   0.950  &   0.977  \\
+
+-> Done!
+Evaluating contrast severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.857 | std: 0.115
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.173  &   1.311  &   6.210  &   0.267  &   0.748  &   0.909  &   0.960  \\
+
+-> Done!
+Evaluating contrast severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.542 | std: 0.153
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.278  &   2.621  &   9.455  &   0.410  &   0.500  &   0.788  &   0.898  \\
+
+-> Done!
+Evaluating defocus_blur severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.124 | std: 0.176
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.194  &   1.612  &   6.755  &   0.297  &   0.708  &   0.880  &   0.945  \\
+
+-> Done!
+Evaluating defocus_blur severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.269 | std: 0.212
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.344  &   3.445  &  10.297  &   0.481  &   0.415  &   0.705  &   0.858  \\
+
+-> Done!
+Evaluating defocus_blur severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.787 | std: 0.207
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.415  &   4.360  &  11.687  &   0.557  &   0.302  &   0.600  &   0.805  \\
+
+-> Done!
+Evaluating defocus_blur severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.796 | std: 0.197
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.421  &   4.395  &  11.735  &   0.561  &   0.302  &   0.588  &   0.800  \\
+
+-> Done!
+Evaluating defocus_blur severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.683 | std: 0.192
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.419  &   4.356  &  11.700  &   0.558  &   0.307  &   0.591  &   0.802  \\
+
+-> Done!
+Evaluating glass_blur severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.760 | std: 0.104
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.137  &   1.133  &   5.518  &   0.220  &   0.832  &   0.943  &   0.973  \\
+
+-> Done!
+Evaluating glass_blur severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.340 | std: 0.176
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.226  &   2.003  &   7.664  &   0.339  &   0.639  &   0.857  &   0.931  \\
+
+-> Done!
+Evaluating glass_blur severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.813 | std: 0.216
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.409  &   4.218  &  11.309  &   0.544  &   0.315  &   0.618  &   0.823  \\
+
+-> Done!
+Evaluating glass_blur severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.699 | std: 0.227
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.429  &   4.510  &  11.791  &   0.569  &   0.298  &   0.578  &   0.795  \\
+
+-> Done!
+Evaluating glass_blur severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.092 | std: 0.206
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.427  &   4.544  &  11.913  &   0.573  &   0.309  &   0.577  &   0.781  \\
+
+-> Done!
+Evaluating motion_blur severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.627 | std: 0.083
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.106  &   0.807  &   4.725  &   0.189  &   0.884  &   0.958  &   0.980  \\
+
+-> Done!
+Evaluating motion_blur severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.866 | std: 0.113
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.136  &   1.050  &   5.766  &   0.231  &   0.817  &   0.933  &   0.970  \\
+
+-> Done!
+Evaluating motion_blur severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.447 | std: 0.198
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.237  &   2.190  &   8.307  &   0.357  &   0.613  &   0.826  &   0.920  \\
+
+-> Done!
+Evaluating motion_blur severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.256 | std: 0.227
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.334  &   3.380  &  10.306  &   0.467  &   0.433  &   0.711  &   0.862  \\
+
+-> Done!
+Evaluating motion_blur severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.492 | std: 0.219
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.361  &   3.685  &  10.785  &   0.497  &   0.386  &   0.677  &   0.842  \\
+
+-> Done!
+Evaluating zoom_blur severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.742 | std: 0.096
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.137  &   1.039  &   5.273  &   0.223  &   0.833  &   0.939  &   0.972  \\
+
+-> Done!
+Evaluating zoom_blur severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.881 | std: 0.108
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.160  &   1.209  &   5.725  &   0.248  &   0.787  &   0.923  &   0.964  \\
+
+-> Done!
+Evaluating zoom_blur severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.815 | std: 0.102
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.150  &   1.138  &   5.644  &   0.239  &   0.808  &   0.927  &   0.967  \\
+
+-> Done!
+Evaluating zoom_blur severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.887 | std: 0.108
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.163  &   1.249  &   5.933  &   0.255  &   0.783  &   0.916  &   0.962  \\
+
+-> Done!
+Evaluating zoom_blur severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.848 | std: 0.111
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.162  &   1.279  &   5.998  &   0.253  &   0.783  &   0.917  &   0.962  \\
+
+-> Done!
+Evaluating elastic_transform severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.511 | std: 0.070
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.093  &   0.776  &   4.367  &   0.172  &   0.912  &   0.967  &   0.983  \\
+
+-> Done!
+Evaluating elastic_transform severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.526 | std: 0.069
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.093  &   0.765  &   4.389  &   0.173  &   0.910  &   0.966  &   0.983  \\
+
+-> Done!
+Evaluating elastic_transform severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.539 | std: 0.070
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.095  &   0.770  &   4.439  &   0.176  &   0.907  &   0.965  &   0.982  \\
+
+-> Done!
+Evaluating elastic_transform severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.558 | std: 0.070
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.097  &   0.772  &   4.514  &   0.179  &   0.902  &   0.963  &   0.982  \\
+
+-> Done!
+Evaluating elastic_transform severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.591 | std: 0.070
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.102  &   0.792  &   4.650  &   0.184  &   0.893  &   0.961  &   0.981  \\
+
+-> Done!
+Evaluating pixelate severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.437 | std: 0.073
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.097  &   0.818  &   4.398  &   0.175  &   0.905  &   0.966  &   0.983  \\
+
+-> Done!
+Evaluating pixelate severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.444 | std: 0.073
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.099  &   0.819  &   4.426  &   0.177  &   0.902  &   0.965  &   0.983  \\
+
+-> Done!
+Evaluating pixelate severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.404 | std: 0.076
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.111  &   0.943  &   4.689  &   0.188  &   0.884  &   0.959  &   0.981  \\
+
+-> Done!
+Evaluating pixelate severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.425 | std: 0.083
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.136  &   1.193  &   5.250  &   0.211  &   0.844  &   0.945  &   0.976  \\
+
+-> Done!
+Evaluating pixelate severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.504 | std: 0.090
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.149  &   1.312  &   5.539  &   0.225  &   0.817  &   0.934  &   0.972  \\
+
+-> Done!
+Evaluating jpeg_compression severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.501 | std: 0.072
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.108  &   0.873  &   4.584  &   0.186  &   0.888  &   0.961  &   0.981  \\
+
+-> Done!
+Evaluating jpeg_compression severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.537 | std: 0.080
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.121  &   0.998  &   4.806  &   0.198  &   0.866  &   0.954  &   0.979  \\
+
+-> Done!
+Evaluating jpeg_compression severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.576 | std: 0.089
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.132  &   1.082  &   5.000  &   0.209  &   0.843  &   0.948  &   0.977  \\
+
+-> Done!
+Evaluating jpeg_compression severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.764 | std: 0.129
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.175  &   1.495  &   5.668  &   0.247  &   0.766  &   0.920  &   0.968  \\
+
+-> Done!
+Evaluating jpeg_compression severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.979 | std: 0.176
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.219  &   2.020  &   6.471  &   0.286  &   0.685  &   0.886  &   0.956  \\
+
+-> Done!
+Evaluating shot_noise severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.701 | std: 0.080
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.118  &   0.880  &   4.786  &   0.196  &   0.861  &   0.953  &   0.980  \\
+
+-> Done!
+Evaluating shot_noise severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.216 | std: 0.155
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.190  &   1.407  &   6.204  &   0.279  &   0.698  &   0.892  &   0.959  \\
+
+-> Done!
+Evaluating shot_noise severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.899 | std: 0.276
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.307  &   2.619  &   8.415  &   0.392  &   0.473  &   0.763  &   0.906  \\
+
+-> Done!
+Evaluating shot_noise severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 10.431 | std: 0.254
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.396  &   3.660  &  10.111  &   0.486  &   0.348  &   0.639  &   0.840  \\
+
+-> Done!
+Evaluating shot_noise severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 10.243 | std: 0.270
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.422  &   4.198  &  11.130  &   0.536  &   0.323  &   0.594  &   0.800  \\
+
+-> Done!
+Evaluating iso_noise severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.652 | std: 0.215
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.237  &   1.865  &   7.021  &   0.325  &   0.604  &   0.843  &   0.939  \\
+
+-> Done!
+Evaluating iso_noise severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 7.221 | std: 0.248
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.278  &   2.294  &   7.764  &   0.365  &   0.525  &   0.797  &   0.920  \\
+
+-> Done!
+Evaluating iso_noise severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 8.495 | std: 0.263
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.339  &   2.959  &   8.758  &   0.419  &   0.425  &   0.726  &   0.891  \\
+
+-> Done!
+Evaluating iso_noise severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 10.041 | std: 0.254
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.388  &   3.528  &   9.653  &   0.468  &   0.361  &   0.659  &   0.855  \\
+
+-> Done!
+Evaluating iso_noise severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 10.845 | std: 0.262
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.416  &   4.010  &  10.661  &   0.516  &   0.329  &   0.607  &   0.814  \\
+
+-> Done!
+Evaluating impulse_noise severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.944 | std: 0.112
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.162  &   1.228  &   5.865  &   0.249  &   0.766  &   0.916  &   0.967  \\
+
+-> Done!
+Evaluating impulse_noise severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.742 | std: 0.179
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.246  &   2.043  &   7.728  &   0.346  &   0.581  &   0.832  &   0.928  \\
+
+-> Done!
+Evaluating impulse_noise severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 8.105 | std: 0.234
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.328  &   2.895  &   9.005  &   0.420  &   0.430  &   0.735  &   0.889  \\
+
+-> Done!
+Evaluating impulse_noise severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 10.242 | std: 0.248
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.403  &   3.822  &  10.415  &   0.499  &   0.339  &   0.626  &   0.829  \\
+
+-> Done!
+Evaluating impulse_noise severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 8.908 | std: 0.290
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.429  &   4.395  &  11.490  &   0.554  &   0.314  &   0.582  &   0.787  \\
+
+-> Done!
+Evaluating gaussian_noise severity 1 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 5.880 | std: 0.133
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.165  &   1.275  &   5.634  &   0.249  &   0.765  &   0.911  &   0.965  \\
+
+-> Done!
+Evaluating gaussian_noise severity 2 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 6.598 | std: 0.195
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.239  &   1.954  &   7.058  &   0.330  &   0.602  &   0.845  &   0.934  \\
+
+-> Done!
+Evaluating gaussian_noise severity 3 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 8.787 | std: 0.254
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.351  &   3.117  &   8.826  &   0.428  &   0.404  &   0.715  &   0.887  \\
+
+-> Done!
+Evaluating gaussian_noise severity 4 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 10.746 | std: 0.249
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.407  &   3.817  &  10.160  &   0.494  &   0.339  &   0.627  &   0.834  \\
+
+-> Done!
+Evaluating gaussian_noise severity 5 ...
+-> Loading weights from ../autodl-tmp/KITTI_192x640_models
+-> Computing predictions with size 640x192
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:135: UserWarning: Using 'weights' as positional parameter(s) is deprecated since 0.13 and may be removed in the future. Please use keyword parameter(s) instead.
+  warnings.warn(
+/root/miniconda3/envs/lite-mono/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+-> Evaluating
+   Mono evaluation - using median scaling
+ Scaling ratios | med: 9.940 | std: 0.295
+
+   abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 | 
+&   0.430  &   4.400  &  11.438  &   0.553  &   0.317  &   0.582  &   0.786  \\
+
+-> Done!
+
+=== 各扰动平均结果 ===
+dark            :  0.228 |  1.969 |  6.961 |  0.317 |  0.647 |  0.840 |  0.931
+snow            :  0.400 |  5.220 | 10.145 |  0.472 |  0.414 |  0.670 |  0.835
+color_quant     :  0.152 |  1.349 |  5.458 |  0.230 |  0.794 |  0.920 |  0.966
+fog             :  0.115 |  0.914 |  4.747 |  0.194 |  0.873 |  0.955 |  0.979
+frost           :  0.201 |  1.719 |  6.452 |  0.292 |  0.693 |  0.880 |  0.945
+brightness      :  0.100 |  0.830 |  4.586 |  0.178 |  0.900 |  0.964 |  0.982
+contrast        :  0.155 |  1.303 |  5.943 |  0.250 |  0.779 |  0.914 |  0.959
+defocus_blur    :  0.359 |  3.634 | 10.435 |  0.491 |  0.407 |  0.673 |  0.842
+glass_blur      :  0.326 |  3.282 |  9.639 |  0.449 |  0.479 |  0.715 |  0.861
+motion_blur     :  0.235 |  2.222 |  7.978 |  0.348 |  0.627 |  0.821 |  0.915
+zoom_blur       :  0.154 |  1.183 |  5.715 |  0.244 |  0.799 |  0.924 |  0.965
+elastic_transform:  0.096 |  0.775 |  4.472 |  0.177 |  0.905 |  0.964 |  0.982
+pixelate        :  0.118 |  1.017 |  4.860 |  0.195 |  0.870 |  0.954 |  0.979
+jpeg_compression:  0.151 |  1.294 |  5.306 |  0.225 |  0.810 |  0.934 |  0.972
+shot_noise      :  0.287 |  2.553 |  8.129 |  0.378 |  0.541 |  0.768 |  0.897
+iso_noise       :  0.332 |  2.931 |  8.771 |  0.419 |  0.449 |  0.726 |  0.884
+impulse_noise   :  0.314 |  2.877 |  8.901 |  0.414 |  0.486 |  0.738 |  0.880
+gaussian_noise  :  0.318 |  2.913 |  8.623 |  0.411 |  0.485 |  0.736 |  0.881
+
+=== 所有扰动平均 ===
+ 0.224 |  2.110 |  7.062 |  0.316 |  0.664 |  0.839 |  0.925
+ 
+ 
+ 
+ 
+ 

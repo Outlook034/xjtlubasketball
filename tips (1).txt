@@ -1,0 +1,95 @@
+python create_corruptions.py \
+    --image_dir data/nyu2_test \
+    --save_path corrupted_data \
+    --H 192 \
+    --W 640 \
+    --if_brightness \
+    --if_dark \
+    --if_fog \
+    --if_frost \
+    --if_snow \
+    --if_contrast \
+    --if_defocus_blur \
+    --if_glass_blur \
+    --if_motion_blur \
+    --if_zoom_blur \
+    --if_elastic \
+    --if_color_quant \
+    --if_gaussian_noise \
+    --if_impulse_noise \
+    --if_shot_noise \
+    --if_iso_noise \
+    --if_pixelate \
+    --if_jpeg \
+    --if_copy_clean
+    
+    
+    
+python create_cityscapes_corruptions.py \
+  --image_root leftImg8bit\test 
+  --save_path Cityscapes_C_Dataset \
+  --H 192 \
+  --W 640 \
+  --if_brightness \
+  --if_dark \
+  --if_fog \
+  --if_frost \
+  --if_snow \
+  --if_contrast \
+  --if_defocus_blur \
+  --if_glass_blur \
+  --if_motion_blur \
+  --if_zoom_blur \
+  --if_elastic \
+  --if_color_quant \
+  --if_gaussian_noise \
+  --if_impulse_noise \
+  --if_shot_noise \
+  --if_iso_noise \
+  --if_pixelate \
+  --if_jpeg \    
+  
+  
+  
+  
+  
+  
+python create_cityscapes_corruptions.py \
+  --image_root leftImg8bit \
+  --folder_name leftImg8bit\
+  --split test \
+  --test_list test_files.txt \
+  --H 192 \
+  --W 640 \
+  --if_brightness \
+  --if_dark \
+  --if_fog \
+  --if_frost \
+  --if_snow \
+  --if_contrast \
+  --if_defocus_blur \
+  --if_glass_blur \
+  --if_motion_blur \
+  --if_zoom_blur \
+  --if_elastic \
+  --if_color_quant \
+  --if_gaussian_noise \
+  --if_impulse_noise \
+  --if_shot_noise \
+  --if_iso_noise \
+  --if_pixelate \
+  --if_jpeg\
+  --if_copy_clean
+  
+  
+  
+  
+  
+python create_cityscapes_corruptions.py \
+    --image_root leftImg8bit/test \
+    --test_list splits/cityscapes/test_files.txt \
+    --folder_name leftImg8bit \
+    --split test \
+    --save_path cityscapes\
+    --if_snow \
+    --severity_levels 1 2 3 4 5

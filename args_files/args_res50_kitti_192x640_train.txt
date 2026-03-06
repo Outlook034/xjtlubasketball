@@ -1,0 +1,18 @@
+--data_path ../autodl-tmp/data/kitti
+--dataset kitti 
+--eval_split eigen 
+--height 192 
+--width 640
+--batch_size 16
+--num_epochs 25
+--model_dim 64
+--patch_size 16
+--query_nums 120
+--scheduler_step_size 15
+--eval_mono
+--load_weights_folder ../autodl-tmp/pretrain_pth
+--post_process
+--min_depth 0.001
+--max_depth 80.0
+
+

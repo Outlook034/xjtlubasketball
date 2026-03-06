@@ -1,0 +1,24 @@
+--eval_data_path data/CS_RAW/
+--eval_split cityscapes
+--height 320
+--width 1024
+--model_dim 32
+--patch_size 16
+--dim_out 64
+--query_nums 64
+--min_depth 0.001
+--max_depth 80.0
+--load_weights_folder models/res50_cityscapes_320x1024/
+--eval_mono
+--post_process
+--save_pred_disps
+--use_vectta
+--vectta_mode vec
+--clean_pred_path clean_pred_disps.npy
+--vec_steps 5
+--vec_update_mode bn_decoder
+--vec_lr 1e-4
+--vec_early_stop
+--vec_early_stop_patience 3
+--vec_grad_clip 1.0
+

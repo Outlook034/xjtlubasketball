@@ -1,0 +1,1073 @@
+开始评估，日志将保存到: evaluation_log_20250913_231833.txt
+开始时间: 2025-09-13 23:18:33
+
+评估 dark 严重级别 1 ...
+Model loading time: 1.4531s
+Scaling ratios | med: 5.403 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.107  &   0.753  &   4.385  &   0.178  &   0.879  &   0.961  &   0.984  \\
+Evaluation time: 5.3814s
+Total execution time: 228.7810s
+
+-> Done!
+成功解析指标: [0.107, 0.753, 4.385, 0.178, 0.879, 0.961, 0.984]
+
+评估 dark 严重级别 2 ...
+Model loading time: 1.4681s
+Scaling ratios | med: 5.393 | std: 0.080
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.112  &   0.792  &   4.488  &   0.183  &   0.871  &   0.958  &   0.983  \\
+Evaluation time: 5.3924s
+Total execution time: 226.9995s
+
+-> Done!
+成功解析指标: [0.112, 0.792, 4.488, 0.183, 0.871, 0.958, 0.983]
+
+评估 dark 严重级别 3 ...
+Model loading time: 1.6009s
+Scaling ratios | med: 5.375 | std: 0.084
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.120  &   0.846  &   4.639  &   0.191  &   0.858  &   0.954  &   0.982  \\
+Evaluation time: 5.2729s
+Total execution time: 229.0736s
+
+-> Done!
+成功解析指标: [0.12, 0.846, 4.639, 0.191, 0.858, 0.954, 0.982]
+
+评估 dark 严重级别 4 ...
+Model loading time: 1.4196s
+Scaling ratios | med: 5.381 | std: 0.092
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.136  &   0.964  &   4.955  &   0.207  &   0.828  &   0.945  &   0.979  \\
+Evaluation time: 5.2938s
+Total execution time: 227.1924s
+
+-> Done!
+成功解析指标: [0.136, 0.964, 4.955, 0.207, 0.828, 0.945, 0.979]
+
+评估 dark 严重级别 5 ...
+Model loading time: 1.6023s
+Scaling ratios | med: 5.345 | std: 0.107
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.157  &   1.160  &   5.458  &   0.230  &   0.786  &   0.929  &   0.973  \\
+Evaluation time: 5.2736s
+Total execution time: 229.1166s
+
+-> Done!
+成功解析指标: [0.157, 1.16, 5.458, 0.23, 0.786, 0.929, 0.973]
+
+评估 snow 严重级别 1 ...
+Model loading time: 1.4485s
+Scaling ratios | med: 5.407 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.106  &   0.744  &   4.390  &   0.177  &   0.882  &   0.963  &   0.984  \\
+Evaluation time: 5.2420s
+Total execution time: 226.5258s
+
+-> Done!
+成功解析指标: [0.106, 0.744, 4.39, 0.177, 0.882, 0.963, 0.984]
+
+评估 snow 严重级别 2 ...
+Model loading time: 1.4713s
+Scaling ratios | med: 5.377 | std: 0.085
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.118  &   0.815  &   4.593  &   0.187  &   0.859  &   0.956  &   0.983  \\
+Evaluation time: 5.5194s
+Total execution time: 226.7716s
+
+-> Done!
+成功解析指标: [0.118, 0.815, 4.593, 0.187, 0.859, 0.956, 0.983]
+
+评估 snow 严重级别 3 ...
+Model loading time: 1.5071s
+Scaling ratios | med: 5.368 | std: 0.084
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.118  &   0.830  &   4.649  &   0.189  &   0.860  &   0.955  &   0.983  \\
+Evaluation time: 5.2420s
+Total execution time: 226.7676s
+
+-> Done!
+成功解析指标: [0.118, 0.83, 4.649, 0.189, 0.86, 0.955, 0.983]
+
+评估 snow 严重级别 4 ...
+Model loading time: 1.6347s
+Scaling ratios | med: 5.376 | std: 0.087
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.125  &   0.881  &   4.770  &   0.196  &   0.848  &   0.951  &   0.981  \\
+Evaluation time: 5.2836s
+Total execution time: 228.2562s
+
+-> Done!
+成功解析指标: [0.125, 0.881, 4.77, 0.196, 0.848, 0.951, 0.981]
+
+评估 snow 严重级别 5 ...
+Model loading time: 1.4589s
+Scaling ratios | med: 5.367 | std: 0.087
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.123  &   0.862  &   4.747  &   0.194  &   0.853  &   0.953  &   0.981  \\
+Evaluation time: 5.2508s
+Total execution time: 228.7158s
+
+-> Done!
+成功解析指标: [0.123, 0.862, 4.747, 0.194, 0.853, 0.953, 0.981]
+
+评估 color_quant 严重级别 1 ...
+Model loading time: 1.5714s
+Scaling ratios | med: 5.432 | std: 0.075
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.095  &   0.687  &   4.189  &   0.167  &   0.902  &   0.967  &   0.985  \\
+Evaluation time: 5.6627s
+Total execution time: 229.7771s
+
+-> Done!
+成功解析指标: [0.095, 0.687, 4.189, 0.167, 0.902, 0.967, 0.985]
+
+评估 color_quant 严重级别 2 ...
+Model loading time: 1.5296s
+Scaling ratios | med: 5.422 | std: 0.075
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.096  &   0.694  &   4.210  &   0.168  &   0.899  &   0.967  &   0.985  \\
+Evaluation time: 5.4303s
+Total execution time: 226.8547s
+
+-> Done!
+成功解析指标: [0.096, 0.694, 4.21, 0.168, 0.899, 0.967, 0.985]
+
+评估 color_quant 严重级别 3 ...
+Model loading time: 1.2440s
+Scaling ratios | med: 5.420 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.102  &   0.721  &   4.308  &   0.174  &   0.890  &   0.964  &   0.984  \\
+Evaluation time: 5.5692s
+Total execution time: 225.0629s
+
+-> Done!
+成功解析指标: [0.102, 0.721, 4.308, 0.174, 0.89, 0.964, 0.984]
+
+评估 color_quant 严重级别 4 ...
+Model loading time: 1.4429s
+Scaling ratios | med: 5.392 | std: 0.084
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.121  &   0.829  &   4.643  &   0.192  &   0.857  &   0.954  &   0.982  \\
+Evaluation time: 5.2239s
+Total execution time: 225.8038s
+
+-> Done!
+成功解析指标: [0.121, 0.829, 4.643, 0.192, 0.857, 0.954, 0.982]
+
+评估 color_quant 严重级别 5 ...
+Model loading time: 1.4671s
+Scaling ratios | med: 5.369 | std: 0.107
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.160  &   1.172  &   5.462  &   0.231  &   0.780  &   0.927  &   0.974  \\
+Evaluation time: 5.4376s
+Total execution time: 227.9515s
+
+-> Done!
+成功解析指标: [0.16, 1.172, 5.462, 0.231, 0.78, 0.927, 0.974]
+
+评估 fog 严重级别 1 ...
+Model loading time: 1.6467s
+Scaling ratios | med: 5.417 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.098  &   0.701  &   4.243  &   0.170  &   0.895  &   0.965  &   0.985  \\
+Evaluation time: 5.3952s
+Total execution time: 229.2580s
+
+-> Done!
+成功解析指标: [0.098, 0.701, 4.243, 0.17, 0.895, 0.965, 0.985]
+
+评估 fog 严重级别 2 ...
+Model loading time: 1.3904s
+Scaling ratios | med: 5.411 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.099  &   0.708  &   4.263  &   0.171  &   0.893  &   0.965  &   0.984  \\
+Evaluation time: 5.3968s
+Total execution time: 228.8824s
+
+-> Done!
+成功解析指标: [0.099, 0.708, 4.263, 0.171, 0.893, 0.965, 0.984]
+
+评估 fog 严重级别 3 ...
+Model loading time: 1.3015s
+Scaling ratios | med: 5.411 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.102  &   0.716  &   4.303  &   0.174  &   0.889  &   0.964  &   0.984  \\
+Evaluation time: 5.3426s
+Total execution time: 228.0186s
+
+-> Done!
+成功解析指标: [0.102, 0.716, 4.303, 0.174, 0.889, 0.964, 0.984]
+
+评估 fog 严重级别 4 ...
+Model loading time: 1.2661s
+Scaling ratios | med: 5.409 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.102  &   0.718  &   4.310  &   0.174  &   0.887  &   0.964  &   0.984  \\
+Evaluation time: 5.4328s
+Total execution time: 227.1098s
+
+-> Done!
+成功解析指标: [0.102, 0.718, 4.31, 0.174, 0.887, 0.964, 0.984]
+
+评估 fog 严重级别 5 ...
+Model loading time: 1.5251s
+Scaling ratios | med: 5.406 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.106  &   0.738  &   4.371  &   0.177  &   0.882  &   0.962  &   0.984  \\
+Evaluation time: 5.3590s
+Total execution time: 226.1318s
+
+-> Done!
+成功解析指标: [0.106, 0.738, 4.371, 0.177, 0.882, 0.962, 0.984]
+
+评估 frost 严重级别 1 ...
+Model loading time: 1.3949s
+Scaling ratios | med: 5.396 | std: 0.082
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.108  &   0.763  &   4.415  &   0.179  &   0.880  &   0.961  &   0.984  \\
+Evaluation time: 5.2653s
+Total execution time: 227.5274s
+
+-> Done!
+成功解析指标: [0.108, 0.763, 4.415, 0.179, 0.88, 0.961, 0.984]
+
+评估 frost 严重级别 2 ...
+Model loading time: 1.2752s
+Scaling ratios | med: 5.394 | std: 0.086
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.120  &   0.837  &   4.643  &   0.191  &   0.857  &   0.954  &   0.982  \\
+Evaluation time: 5.4583s
+Total execution time: 230.4064s
+
+-> Done!
+成功解析指标: [0.12, 0.837, 4.643, 0.191, 0.857, 0.954, 0.982]
+
+评估 frost 严重级别 3 ...
+Model loading time: 1.3744s
+Scaling ratios | med: 5.397 | std: 0.095
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.130  &   0.909  &   4.837  &   0.202  &   0.839  &   0.949  &   0.980  \\
+Evaluation time: 5.3210s
+Total execution time: 218.3763s
+
+-> Done!
+成功解析指标: [0.13, 0.909, 4.837, 0.202, 0.839, 0.949, 0.98]
+
+评估 frost 严重级别 4 ...
+Model loading time: 1.3337s
+Scaling ratios | med: 5.375 | std: 0.096
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.133  &   0.942  &   4.913  &   0.205  &   0.832  &   0.946  &   0.979  \\
+Evaluation time: 5.2276s
+Total execution time: 223.9984s
+
+-> Done!
+成功解析指标: [0.133, 0.942, 4.913, 0.205, 0.832, 0.946, 0.979]
+
+评估 frost 严重级别 5 ...
+Model loading time: 1.6727s
+Scaling ratios | med: 5.374 | std: 0.105
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.141  &   0.986  &   5.037  &   0.212  &   0.817  &   0.941  &   0.978  \\
+Evaluation time: 5.3133s
+Total execution time: 226.2198s
+
+-> Done!
+成功解析指标: [0.141, 0.986, 5.037, 0.212, 0.817, 0.941, 0.978]
+
+评估 brightness 严重级别 1 ...
+Model loading time: 1.1862s
+Scaling ratios | med: 5.431 | std: 0.075
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.095  &   0.681  &   4.174  &   0.167  &   0.901  &   0.967  &   0.985  \\
+Evaluation time: 5.3245s
+Total execution time: 226.6134s
+
+-> Done!
+成功解析指标: [0.095, 0.681, 4.174, 0.167, 0.901, 0.967, 0.985]
+
+评估 brightness 严重级别 2 ...
+Model loading time: 1.4906s
+Scaling ratios | med: 5.429 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.096  &   0.681  &   4.194  &   0.168  &   0.899  &   0.967  &   0.985  \\
+Evaluation time: 5.2605s
+Total execution time: 224.8939s
+
+-> Done!
+成功解析指标: [0.096, 0.681, 4.194, 0.168, 0.899, 0.967, 0.985]
+
+评估 brightness 严重级别 3 ...
+Model loading time: 1.2702s
+Scaling ratios | med: 5.419 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.097  &   0.685  &   4.213  &   0.169  &   0.896  &   0.966  &   0.985  \\
+Evaluation time: 5.2312s
+Total execution time: 228.5084s
+
+-> Done!
+成功解析指标: [0.097, 0.685, 4.213, 0.169, 0.896, 0.966, 0.985]
+
+评估 brightness 严重级别 4 ...
+Model loading time: 1.3029s
+Scaling ratios | med: 5.413 | std: 0.078
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.099  &   0.687  &   4.242  &   0.170  &   0.893  &   0.966  &   0.985  \\
+Evaluation time: 6.0481s
+Total execution time: 229.0026s
+
+-> Done!
+成功解析指标: [0.099, 0.687, 4.242, 0.17, 0.893, 0.966, 0.985]
+
+评估 brightness 严重级别 5 ...
+Model loading time: 1.5181s
+Scaling ratios | med: 5.400 | std: 0.078
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.101  &   0.694  &   4.277  &   0.172  &   0.889  &   0.965  &   0.985  \\
+Evaluation time: 5.2586s
+Total execution time: 226.5372s
+
+-> Done!
+成功解析指标: [0.101, 0.694, 4.277, 0.172, 0.889, 0.965, 0.985]
+
+评估 contrast 严重级别 1 ...
+Model loading time: 1.2215s
+Scaling ratios | med: 5.427 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.095  &   0.688  &   4.203  &   0.168  &   0.900  &   0.967  &   0.985  \\
+Evaluation time: 5.1584s
+Total execution time: 228.8781s
+
+-> Done!
+成功解析指标: [0.095, 0.688, 4.203, 0.168, 0.9, 0.967, 0.985]
+
+评估 contrast 严重级别 2 ...
+Model loading time: 1.2767s
+Scaling ratios | med: 5.423 | std: 0.075
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.096  &   0.693  &   4.216  &   0.169  &   0.900  &   0.966  &   0.985  \\
+Evaluation time: 5.6506s
+Total execution time: 228.0877s
+
+-> Done!
+成功解析指标: [0.096, 0.693, 4.216, 0.169, 0.9, 0.966, 0.985]
+
+评估 contrast 严重级别 3 ...
+Model loading time: 1.2550s
+Scaling ratios | med: 5.413 | std: 0.075
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.097  &   0.699  &   4.245  &   0.170  &   0.898  &   0.966  &   0.985  \\
+Evaluation time: 5.2601s
+Total execution time: 226.2173s
+
+-> Done!
+成功解析指标: [0.097, 0.699, 4.245, 0.17, 0.898, 0.966, 0.985]
+
+评估 contrast 严重级别 4 ...
+Model loading time: 1.2030s
+Scaling ratios | med: 5.400 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.102  &   0.717  &   4.314  &   0.174  &   0.890  &   0.964  &   0.984  \\
+Evaluation time: 5.1673s
+Total execution time: 221.3101s
+
+-> Done!
+成功解析指标: [0.102, 0.717, 4.314, 0.174, 0.89, 0.964, 0.984]
+
+评估 contrast 严重级别 5 ...
+Model loading time: 1.3488s
+Scaling ratios | med: 5.407 | std: 0.078
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.110  &   0.758  &   4.442  &   0.181  &   0.876  &   0.960  &   0.983  \\
+Evaluation time: 5.1633s
+Total execution time: 225.1118s
+
+-> Done!
+成功解析指标: [0.11, 0.758, 4.442, 0.181, 0.876, 0.96, 0.983]
+
+评估 defocus_blur 严重级别 1 ...
+Model loading time: 1.2227s
+Scaling ratios | med: 5.396 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.106  &   0.744  &   4.428  &   0.177  &   0.882  &   0.961  &   0.984  \\
+Evaluation time: 5.2699s
+Total execution time: 226.8422s
+
+-> Done!
+成功解析指标: [0.106, 0.744, 4.428, 0.177, 0.882, 0.961, 0.984]
+
+评估 defocus_blur 严重级别 2 ...
+Model loading time: 1.2341s
+Scaling ratios | med: 5.381 | std: 0.080
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.114  &   0.812  &   4.635  &   0.185  &   0.869  &   0.956  &   0.983  \\
+Evaluation time: 5.3345s
+Total execution time: 226.9591s
+
+-> Done!
+成功解析指标: [0.114, 0.812, 4.635, 0.185, 0.869, 0.956, 0.983]
+
+评估 defocus_blur 严重级别 3 ...
+Model loading time: 1.6030s
+Scaling ratios | med: 5.376 | std: 0.085
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.127  &   0.923  &   4.946  &   0.198  &   0.845  &   0.949  &   0.981  \\
+Evaluation time: 5.1956s
+Total execution time: 231.5852s
+
+-> Done!
+成功解析指标: [0.127, 0.923, 4.946, 0.198, 0.845, 0.949, 0.981]
+
+评估 defocus_blur 严重级别 4 ...
+Model loading time: 1.2417s
+Scaling ratios | med: 5.384 | std: 0.091
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.138  &   1.011  &   5.208  &   0.210  &   0.824  &   0.941  &   0.978  \\
+Evaluation time: 5.3211s
+Total execution time: 229.2043s
+
+-> Done!
+成功解析指标: [0.138, 1.011, 5.208, 0.21, 0.824, 0.941, 0.978]
+
+评估 defocus_blur 严重级别 5 ...
+Model loading time: 1.3014s
+Scaling ratios | med: 5.381 | std: 0.097
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.147  &   1.090  &   5.457  &   0.220  &   0.806  &   0.934  &   0.975  \\
+Evaluation time: 5.1858s
+Total execution time: 227.8653s
+
+-> Done!
+成功解析指标: [0.147, 1.09, 5.457, 0.22, 0.806, 0.934, 0.975]
+
+评估 glass_blur 严重级别 1 ...
+Model loading time: 1.2840s
+Scaling ratios | med: 5.395 | std: 0.078
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.104  &   0.746  &   4.429  &   0.175  &   0.884  &   0.963  &   0.984  \\
+Evaluation time: 5.2120s
+Total execution time: 218.5706s
+
+-> Done!
+成功解析指标: [0.104, 0.746, 4.429, 0.175, 0.884, 0.963, 0.984]
+
+评估 glass_blur 严重级别 2 ...
+Model loading time: 1.2641s
+Scaling ratios | med: 5.388 | std: 0.080
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.112  &   0.804  &   4.596  &   0.182  &   0.871  &   0.958  &   0.984  \\
+Evaluation time: 6.4621s
+Total execution time: 227.3695s
+
+-> Done!
+成功解析指标: [0.112, 0.804, 4.596, 0.182, 0.871, 0.958, 0.984]
+
+评估 glass_blur 严重级别 3 ...
+Model loading time: 1.2736s
+Scaling ratios | med: 5.344 | std: 0.087
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.129  &   0.952  &   5.006  &   0.198  &   0.842  &   0.948  &   0.981  \\
+Evaluation time: 5.8827s
+Total execution time: 228.4317s
+
+-> Done!
+成功解析指标: [0.129, 0.952, 5.006, 0.198, 0.842, 0.948, 0.981]
+
+评估 glass_blur 严重级别 4 ...
+Model loading time: 1.2491s
+Scaling ratios | med: 5.334 | std: 0.091
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.135  &   1.005  &   5.152  &   0.206  &   0.831  &   0.944  &   0.979  \\
+Evaluation time: 5.2521s
+Total execution time: 229.3819s
+
+-> Done!
+成功解析指标: [0.135, 1.005, 5.152, 0.206, 0.831, 0.944, 0.979]
+
+评估 glass_blur 严重级别 5 ...
+Model loading time: 1.5861s
+Scaling ratios | med: 5.338 | std: 0.099
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.148  &   1.089  &   5.409  &   0.218  &   0.806  &   0.936  &   0.976  \\
+Evaluation time: 5.1610s
+Total execution time: 228.2690s
+
+-> Done!
+成功解析指标: [0.148, 1.089, 5.409, 0.218, 0.806, 0.936, 0.976]
+
+评估 motion_blur 严重级别 1 ...
+Model loading time: 1.6727s
+Scaling ratios | med: 5.405 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.101  &   0.713  &   4.333  &   0.173  &   0.891  &   0.965  &   0.984  \\
+Evaluation time: 4.9391s
+Total execution time: 224.8624s
+
+-> Done!
+成功解析指标: [0.101, 0.713, 4.333, 0.173, 0.891, 0.965, 0.984]
+
+评估 motion_blur 严重级别 2 ...
+Model loading time: 1.4342s
+Scaling ratios | med: 5.389 | std: 0.082
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.107  &   0.765  &   4.488  &   0.179  &   0.880  &   0.961  &   0.984  \\
+Evaluation time: 5.1722s
+Total execution time: 224.7825s
+
+-> Done!
+成功解析指标: [0.107, 0.765, 4.488, 0.179, 0.88, 0.961, 0.984]
+
+评估 motion_blur 严重级别 3 ...
+Model loading time: 1.2591s
+Scaling ratios | med: 5.374 | std: 0.085
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.118  &   0.842  &   4.733  &   0.189  &   0.860  &   0.956  &   0.982  \\
+Evaluation time: 5.8760s
+Total execution time: 228.6855s
+
+-> Done!
+成功解析指标: [0.118, 0.842, 4.733, 0.189, 0.86, 0.956, 0.982]
+
+评估 motion_blur 严重级别 4 ...
+Model loading time: 1.4448s
+Scaling ratios | med: 5.356 | std: 0.088
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.128  &   0.934  &   5.005  &   0.200  &   0.844  &   0.949  &   0.980  \\
+Evaluation time: 5.9919s
+Total execution time: 228.4213s
+
+-> Done!
+成功解析指标: [0.128, 0.934, 5.005, 0.2, 0.844, 0.949, 0.98]
+
+评估 motion_blur 严重级别 5 ...
+Model loading time: 1.2371s
+Scaling ratios | med: 5.345 | std: 0.095
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.140  &   1.041  &   5.276  &   0.213  &   0.820  &   0.940  &   0.977  \\
+Evaluation time: 5.3072s
+Total execution time: 226.7749s
+
+-> Done!
+成功解析指标: [0.14, 1.041, 5.276, 0.213, 0.82, 0.94, 0.977]
+
+评估 zoom_blur 严重级别 1 ...
+Model loading time: 1.2335s
+Scaling ratios | med: 5.367 | std: 0.081
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.115  &   0.825  &   4.546  &   0.187  &   0.868  &   0.955  &   0.982  \\
+Evaluation time: 5.1836s
+Total execution time: 226.5049s
+
+-> Done!
+成功解析指标: [0.115, 0.825, 4.546, 0.187, 0.868, 0.955, 0.982]
+
+评估 zoom_blur 严重级别 2 ...
+Model loading time: 1.3603s
+Scaling ratios | med: 5.364 | std: 0.083
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.121  &   0.876  &   4.671  &   0.193  &   0.857  &   0.952  &   0.981  \\
+Evaluation time: 5.1962s
+Total execution time: 224.4196s
+
+-> Done!
+成功解析指标: [0.121, 0.876, 4.671, 0.193, 0.857, 0.952, 0.981]
+
+评估 zoom_blur 严重级别 3 ...
+Model loading time: 1.4054s
+Scaling ratios | med: 5.369 | std: 0.084
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.123  &   0.892  &   4.685  &   0.194  &   0.852  &   0.951  &   0.981  \\
+Evaluation time: 4.9601s
+Total execution time: 227.4291s
+
+-> Done!
+成功解析指标: [0.123, 0.892, 4.685, 0.194, 0.852, 0.951, 0.981]
+
+评估 zoom_blur 严重级别 4 ...
+Model loading time: 1.2161s
+Scaling ratios | med: 5.359 | std: 0.087
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.128  &   0.927  &   4.774  &   0.199  &   0.844  &   0.947  &   0.980  \\
+Evaluation time: 5.1484s
+Total execution time: 226.7981s
+
+-> Done!
+成功解析指标: [0.128, 0.927, 4.774, 0.199, 0.844, 0.947, 0.98]
+
+评估 zoom_blur 严重级别 5 ...
+Model loading time: 1.2691s
+Scaling ratios | med: 5.362 | std: 0.088
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.130  &   0.949  &   4.837  &   0.202  &   0.840  &   0.946  &   0.979  \\
+Evaluation time: 5.0097s
+Total execution time: 226.0893s
+
+-> Done!
+成功解析指标: [0.13, 0.949, 4.837, 0.202, 0.84, 0.946, 0.979]
+
+评估 elastic_transform 严重级别 1 ...
+Model loading time: 1.3538s
+Scaling ratios | med: 5.415 | std: 0.075
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.096  &   0.690  &   4.226  &   0.169  &   0.898  &   0.966  &   0.985  \\
+Evaluation time: 5.1167s
+Total execution time: 225.4412s
+
+-> Done!
+成功解析指标: [0.096, 0.69, 4.226, 0.169, 0.898, 0.966, 0.985]
+
+评估 elastic_transform 严重级别 2 ...
+Model loading time: 1.3924s
+Scaling ratios | med: 5.410 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.097  &   0.701  &   4.239  &   0.169  &   0.896  &   0.966  &   0.985  \\
+Evaluation time: 5.2226s
+Total execution time: 227.1319s
+
+-> Done!
+成功解析指标: [0.097, 0.701, 4.239, 0.169, 0.896, 0.966, 0.985]
+
+评估 elastic_transform 严重级别 3 ...
+Model loading time: 1.3378s
+Scaling ratios | med: 5.417 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.099  &   0.706  &   4.289  &   0.171  &   0.894  &   0.965  &   0.985  \\
+Evaluation time: 6.5692s
+Total execution time: 229.5833s
+
+-> Done!
+成功解析指标: [0.099, 0.706, 4.289, 0.171, 0.894, 0.965, 0.985]
+
+评估 elastic_transform 严重级别 4 ...
+Model loading time: 1.2327s
+Scaling ratios | med: 5.411 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.099  &   0.718  &   4.327  &   0.171  &   0.893  &   0.964  &   0.985  \\
+Evaluation time: 5.3587s
+Total execution time: 226.1393s
+
+-> Done!
+成功解析指标: [0.099, 0.718, 4.327, 0.171, 0.893, 0.964, 0.985]
+
+评估 elastic_transform 严重级别 5 ...
+Model loading time: 1.3329s
+Scaling ratios | med: 5.399 | std: 0.078
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.102  &   0.736  &   4.375  &   0.173  &   0.889  &   0.963  &   0.984  \\
+Evaluation time: 5.1891s
+Total execution time: 225.8900s
+
+-> Done!
+成功解析指标: [0.102, 0.736, 4.375, 0.173, 0.889, 0.963, 0.984]
+
+评估 pixelate 严重级别 1 ...
+Model loading time: 1.4535s
+Scaling ratios | med: 5.411 | std: 0.076
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.098  &   0.695  &   4.228  &   0.169  &   0.896  &   0.966  &   0.985  \\
+Evaluation time: 5.1923s
+Total execution time: 228.7409s
+
+-> Done!
+成功解析指标: [0.098, 0.695, 4.228, 0.169, 0.896, 0.966, 0.985]
+
+评估 pixelate 严重级别 2 ...
+Model loading time: 1.5256s
+Scaling ratios | med: 5.411 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.100  &   0.707  &   4.272  &   0.171  &   0.892  &   0.964  &   0.984  \\
+Evaluation time: 4.9833s
+Total execution time: 226.3770s
+
+-> Done!
+成功解析指标: [0.1, 0.707, 4.272, 0.171, 0.892, 0.964, 0.984]
+
+评估 pixelate 严重级别 3 ...
+Model loading time: 1.1982s
+Scaling ratios | med: 5.397 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.102  &   0.718  &   4.331  &   0.173  &   0.887  &   0.964  &   0.984  \\
+Evaluation time: 4.9926s
+Total execution time: 226.1083s
+
+-> Done!
+成功解析指标: [0.102, 0.718, 4.331, 0.173, 0.887, 0.964, 0.984]
+
+评估 pixelate 严重级别 4 ...
+Model loading time: 1.4942s
+Scaling ratios | med: 5.396 | std: 0.081
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.108  &   0.760  &   4.452  &   0.178  &   0.878  &   0.961  &   0.984  \\
+Evaluation time: 5.2957s
+Total execution time: 227.1789s
+
+-> Done!
+成功解析指标: [0.108, 0.76, 4.452, 0.178, 0.878, 0.961, 0.984]
+
+评估 pixelate 严重级别 5 ...
+Model loading time: 1.4039s
+Scaling ratios | med: 5.380 | std: 0.083
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.113  &   0.798  &   4.579  &   0.183  &   0.869  &   0.958  &   0.983  \\
+Evaluation time: 5.4497s
+Total execution time: 227.6756s
+
+-> Done!
+成功解析指标: [0.113, 0.798, 4.579, 0.183, 0.869, 0.958, 0.983]
+
+评估 jpeg_compression 严重级别 1 ...
+Model loading time: 1.5235s
+Scaling ratios | med: 5.417 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.104  &   0.735  &   4.366  &   0.175  &   0.885  &   0.963  &   0.984  \\
+Evaluation time: 5.1834s
+Total execution time: 229.5478s
+
+-> Done!
+成功解析指标: [0.104, 0.735, 4.366, 0.175, 0.885, 0.963, 0.984]
+
+评估 jpeg_compression 严重级别 2 ...
+Model loading time: 1.5089s
+Scaling ratios | med: 5.403 | std: 0.078
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.108  &   0.770  &   4.456  &   0.179  &   0.877  &   0.961  &   0.984  \\
+Evaluation time: 5.7174s
+Total execution time: 229.1524s
+
+-> Done!
+成功解析指标: [0.108, 0.77, 4.456, 0.179, 0.877, 0.961, 0.984]
+
+评估 jpeg_compression 严重级别 3 ...
+Model loading time: 1.2615s
+Scaling ratios | med: 5.393 | std: 0.081
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.112  &   0.793  &   4.524  &   0.183  &   0.871  &   0.959  &   0.983  \\
+Evaluation time: 5.2464s
+Total execution time: 225.8819s
+
+-> Done!
+成功解析指标: [0.112, 0.793, 4.524, 0.183, 0.871, 0.959, 0.983]
+
+评估 jpeg_compression 严重级别 4 ...
+Model loading time: 1.4277s
+Scaling ratios | med: 5.394 | std: 0.083
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.119  &   0.846  &   4.700  &   0.191  &   0.859  &   0.955  &   0.982  \\
+Evaluation time: 5.1123s
+Total execution time: 226.9837s
+
+-> Done!
+成功解析指标: [0.119, 0.846, 4.7, 0.191, 0.859, 0.955, 0.982]
+
+评估 jpeg_compression 严重级别 5 ...
+Model loading time: 1.4934s
+Scaling ratios | med: 5.365 | std: 0.087
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.129  &   0.906  &   4.915  &   0.201  &   0.839  &   0.948  &   0.980  \\
+Evaluation time: 5.1224s
+Total execution time: 228.7060s
+
+-> Done!
+成功解析指标: [0.129, 0.906, 4.915, 0.201, 0.839, 0.948, 0.98]
+
+评估 shot_noise 严重级别 1 ...
+Model loading time: 1.2655s
+Scaling ratios | med: 5.420 | std: 0.077
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.101  &   0.715  &   4.290  &   0.173  &   0.892  &   0.965  &   0.985  \\
+Evaluation time: 5.0489s
+Total execution time: 226.6298s
+
+-> Done!
+成功解析指标: [0.101, 0.715, 4.29, 0.173, 0.892, 0.965, 0.985]
+
+评估 shot_noise 严重级别 2 ...
+Model loading time: 1.3011s
+Scaling ratios | med: 5.385 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.106  &   0.740  &   4.393  &   0.177  &   0.882  &   0.962  &   0.984  \\
+Evaluation time: 5.1980s
+Total execution time: 226.4351s
+
+-> Done!
+成功解析指标: [0.106, 0.74, 4.393, 0.177, 0.882, 0.962, 0.984]
+
+评估 shot_noise 严重级别 3 ...
+Model loading time: 1.4532s
+Scaling ratios | med: 5.383 | std: 0.082
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.115  &   0.797  &   4.568  &   0.186  &   0.867  &   0.958  &   0.983  \\
+Evaluation time: 5.8247s
+Total execution time: 227.5879s
+
+-> Done!
+成功解析指标: [0.115, 0.797, 4.568, 0.186, 0.867, 0.958, 0.983]
+
+评估 shot_noise 严重级别 4 ...
+Model loading time: 1.6068s
+Scaling ratios | med: 5.371 | std: 0.088
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.128  &   0.895  &   4.868  &   0.199  &   0.842  &   0.950  &   0.981  \\
+Evaluation time: 5.1927s
+Total execution time: 230.2518s
+
+-> Done!
+成功解析指标: [0.128, 0.895, 4.868, 0.199, 0.842, 0.95, 0.981]
+
+评估 shot_noise 严重级别 5 ...
+Model loading time: 1.2354s
+Scaling ratios | med: 5.371 | std: 0.091
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.139  &   1.001  &   5.121  &   0.210  &   0.823  &   0.943  &   0.978  \\
+Evaluation time: 5.2976s
+Total execution time: 228.9300s
+
+-> Done!
+成功解析指标: [0.139, 1.001, 5.121, 0.21, 0.823, 0.943, 0.978]
+
+评估 iso_noise 严重级别 1 ...
+Model loading time: 1.7019s
+Scaling ratios | med: 5.396 | std: 0.079
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.110  &   0.765  &   4.465  &   0.181  &   0.876  &   0.960  &   0.984  \\
+Evaluation time: 5.0220s
+Total execution time: 226.5765s
+
+-> Done!
+成功解析指标: [0.11, 0.765, 4.465, 0.181, 0.876, 0.96, 0.984]
+
+评估 iso_noise 严重级别 2 ...
+Model loading time: 1.5041s
+Scaling ratios | med: 5.381 | std: 0.080
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.113  &   0.788  &   4.541  &   0.184  &   0.870  &   0.958  &   0.983  \\
+Evaluation time: 5.2419s
+Total execution time: 226.3590s
+
+-> Done!
+成功解析指标: [0.113, 0.788, 4.541, 0.184, 0.87, 0.958, 0.983]
+
+评估 iso_noise 严重级别 3 ...
+Model loading time: 1.3061s
+Scaling ratios | med: 5.380 | std: 0.084
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.120  &   0.844  &   4.684  &   0.191  &   0.857  &   0.955  &   0.982  \\
+Evaluation time: 5.3071s
+Total execution time: 225.0139s
+
+-> Done!
+成功解析指标: [0.12, 0.844, 4.684, 0.191, 0.857, 0.955, 0.982]
+
+评估 iso_noise 严重级别 4 ...
+Model loading time: 1.2520s
+Scaling ratios | med: 5.378 | std: 0.089
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.130  &   0.919  &   4.876  &   0.201  &   0.839  &   0.948  &   0.980  \\
+Evaluation time: 5.2238s
+Total execution time: 226.4710s
+
+-> Done!
+成功解析指标: [0.13, 0.919, 4.876, 0.201, 0.839, 0.948, 0.98]
+
+评估 iso_noise 严重级别 5 ...
+Model loading time: 1.2424s
+Scaling ratios | med: 5.366 | std: 0.094
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.142  &   1.024  &   5.149  &   0.214  &   0.815  &   0.940  &   0.978  \\
+Evaluation time: 5.2342s
+Total execution time: 225.5638s
+
+-> Done!
+成功解析指标: [0.142, 1.024, 5.149, 0.214, 0.815, 0.94, 0.978]
+
+评估 impulse_noise 严重级别 1 ...
+Model loading time: 1.4433s
+Scaling ratios | med: 5.389 | std: 0.080
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.110  &   0.770  &   4.453  &   0.181  &   0.875  &   0.960  &   0.984  \\
+Evaluation time: 5.0907s
+Total execution time: 225.1702s
+
+-> Done!
+成功解析指标: [0.11, 0.77, 4.453, 0.181, 0.875, 0.96, 0.984]
+
+评估 impulse_noise 严重级别 2 ...
+Model loading time: 1.4577s
+Scaling ratios | med: 5.371 | std: 0.084
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.116  &   0.813  &   4.610  &   0.187  &   0.863  &   0.957  &   0.983  \\
+Evaluation time: 5.5978s
+Total execution time: 226.4776s
+
+-> Done!
+成功解析指标: [0.116, 0.813, 4.61, 0.187, 0.863, 0.957, 0.983]
+
+评估 impulse_noise 严重级别 3 ...
+Model loading time: 1.3037s
+Scaling ratios | med: 5.375 | std: 0.086
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.122  &   0.850  &   4.710  &   0.193  &   0.852  &   0.953  &   0.982  \\
+Evaluation time: 5.1806s
+Total execution time: 225.3625s
+
+-> Done!
+成功解析指标: [0.122, 0.85, 4.71, 0.193, 0.852, 0.953, 0.982]
+
+评估 impulse_noise 严重级别 4 ...
+Model loading time: 1.2624s
+Scaling ratios | med: 5.361 | std: 0.096
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.137  &   0.957  &   4.992  &   0.207  &   0.823  &   0.945  &   0.980  \\
+Evaluation time: 5.3421s
+Total execution time: 225.2215s
+
+-> Done!
+成功解析指标: [0.137, 0.957, 4.992, 0.207, 0.823, 0.945, 0.98]
+
+评估 impulse_noise 严重级别 5 ...
+Model loading time: 1.5306s
+Scaling ratios | med: 5.397 | std: 0.102
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.152  &   1.089  &   5.375  &   0.224  &   0.792  &   0.932  &   0.976  \\
+Evaluation time: 5.2147s
+Total execution time: 225.6041s
+
+-> Done!
+成功解析指标: [0.152, 1.089, 5.375, 0.224, 0.792, 0.932, 0.976]
+
+评估 gaussian_noise 严重级别 1 ...
+Model loading time: 1.1949s
+Scaling ratios | med: 5.400 | std: 0.080
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.106  &   0.739  &   4.363  &   0.177  &   0.882  &   0.962  &   0.984  \\
+Evaluation time: 5.7330s
+Total execution time: 226.6206s
+
+-> Done!
+成功解析指标: [0.106, 0.739, 4.363, 0.177, 0.882, 0.962, 0.984]
+
+评估 gaussian_noise 严重级别 2 ...
+Model loading time: 1.2538s
+Scaling ratios | med: 5.395 | std: 0.082
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.113  &   0.786  &   4.513  &   0.184  &   0.870  &   0.959  &   0.983  \\
+Evaluation time: 5.3012s
+Total execution time: 225.7678s
+
+-> Done!
+成功解析指标: [0.113, 0.786, 4.513, 0.184, 0.87, 0.959, 0.983]
+
+评估 gaussian_noise 严重级别 3 ...
+Model loading time: 1.4097s
+Scaling ratios | med: 5.390 | std: 0.087
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.124  &   0.869  &   4.742  &   0.195  &   0.850  &   0.952  &   0.982  \\
+Evaluation time: 4.9903s
+Total execution time: 225.9739s
+
+-> Done!
+成功解析指标: [0.124, 0.869, 4.742, 0.195, 0.85, 0.952, 0.982]
+
+评估 gaussian_noise 严重级别 4 ...
+Model loading time: 1.5052s
+Scaling ratios | med: 5.360 | std: 0.091
+
+abs_rel |   sq_rel |     rmse | rmse_log |       a1 |       a2 |       a3 |
+&   0.137  &   0.985  &   5.052  &   0.209  &   0.824  &   0.944  &   0.979  \\
+Evaluation time: 5.1770s
+Total execution time: 226.3660s
+
+-> Done!
+成功解析指标: [0.137, 0.985, 5.052, 0.209, 0.824, 0.944, 0.979]
+
+评估 gaussian_noise 严重级别 5 ...
+Model loading time: 1.3797s

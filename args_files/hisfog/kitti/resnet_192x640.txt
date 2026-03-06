@@ -1,0 +1,27 @@
+--data_path ../autodl-tmp/data/kitti
+--log_dir /mnt/bn/videoarc-depthestimation-disk1/wangyouhong/exps/tmp/lr_res_kitti
+--model_name res_088
+--dataset kitti 
+--eval_split eigen
+--backbone resnet_lite
+--height 192 
+--width 640
+--batch_size 16
+--num_epochs 25
+--scheduler_step_size 15
+--num_layers 50
+--num_features 256
+--model_dim 32
+--patch_size 16
+--dim_out 64
+--query_nums 64
+--min_depth 0.001
+--max_depth 80.0
+--pretrained_pose
+--pose_net_path ../autodl-tmp/KITTI_192x640_models/
+--diff_lr
+--use_stereo
+--load_weights_folder ../autodl-tmp/KITTI_192x640_models
+--eval_mono
+--post_process
+
