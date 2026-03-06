@@ -239,6 +239,13 @@
             <div id="gallery"></div>
         </div>
 
+        <!-- 教练管理 -->
+        <div class="section">
+            <h2>教练组</h2>
+            <button class="btn add-btn" onclick="addCoaches()">+ 添加教练</button>
+            <div id="coaches"></div>
+        </div>
+
         <!-- 留言管理 -->
         <div class="section">
             <h2>留言管理</h2>
@@ -278,6 +285,27 @@
             renderList('gallery', data.gallery || [], ['title', 'url', 'desc']);
             renderMessages();
             renderRosters();
+            renderCoaches();
+        }
+
+        function renderCoaches() {
+            const container = document.getElementById('coaches');
+            container.innerHTML = '';
+            (data.coaches || []).forEach((coach, index) => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                let html = '';
+                if (coach.photo) {
+                    html += `<div class="form-group"><label>预览</label><img src="${coach.photo}" style="max-width:150px;max-height:150px;border-radius:8px;"></div>`;
+                }
+                html += `<div class="form-group"><label>上传照片</label><button class="btn upload-btn" onclick="uploadCoachPhoto(${index})">选择图片</button></div>`;
+                html += `<div class="form-group"><label>姓名</label><input type="text" id="coach_name_${index}" value="${coach.name || ''}"></div>`;
+                html += `<div class="form-group"><label>职位</label><input type="text" id="coach_role_${index}" value="${coach.role || ''}"></div>`;
+                html += `<div class="form-group"><label>简介</label><input type="text" id="coach_bio_${index}" value="${coach.bio || ''}"></div>`;
+                html += `<button class="delete-btn" onclick="deleteCoaches(${index})">删除</button>`;
+                div.innerHTML = html;
+                container.appendChild(div);
+            });
         }
 
         function renderRosters() {
@@ -368,6 +396,28 @@
         function addGallery() { if (!data.gallery) data.gallery = []; data.gallery.push({title: '', url: '', desc: ''}); renderList('gallery', data.gallery, ['title', 'url', 'desc']); }
         function addRoster() { if (!data.rosters) data.rosters = []; data.rosters.push({year: '', players: []}); renderRosters(); }
         function deleteRoster(index) { data.rosters.splice(index, 1); renderRosters(); }
+        function addCoaches() { if (!data.coaches) data.coaches = []; data.coaches.push({name: '', role: '', bio: '', photo: ''}); renderCoaches(); }
+        function deleteCoaches(index) { data.coaches.splice(index, 1); renderCoaches(); }
+        function uploadCoachPhoto(index) {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const formData = new FormData();
+                formData.append('image', file);
+                try {
+                    const response = await fetch('/api/upload', {method: 'POST', body: formData});
+                    const result = await response.json();
+                    if (result.success) {
+                        data.coaches[index].photo = result.url;
+                        renderCoaches();
+                    }
+                } catch (err) { alert('上传失败'); }
+            };
+            input.click();
+        }
 
         function deleteItem(containerId, index) {
             const map = {
@@ -489,6 +539,18 @@
                         });
                     }
                     data.rosters.push({year: year, players: players});
+                }
+            }
+
+            data.coaches = [];
+            const coachCount = (data.coaches || []).length;
+            for (let i = 0; i < coachCount; i++) {
+                let name = document.getElementById('coach_name_' + i)?.value || '';
+                let role = document.getElementById('coach_role_' + i)?.value || '';
+                let bio = document.getElementById('coach_bio_' + i)?.value || '';
+                let photo = data.coaches[i]?.photo || '';
+                if (name) {
+                    data.coaches.push({name: name, role: role, bio: bio, photo: photo});
                 }
             }
 

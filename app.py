@@ -58,6 +58,9 @@ def default_data():
         "messages": [],
         "rosters": [
             {"year": "2025", "players": [{"name": "球员姓名", "number": "10", "position": "后卫"}]}
+        ],
+        "coaches": [
+            {"name": "教练姓名", "role": "主教练", "bio": "教练简介", "photo": ""}
         ]
     }
 

@@ -26,6 +26,7 @@
                 <li><a href="#hall">{% if lang == 'en' %}Hall of Fame{% else %}名人堂{% endif %}</a></li>
                 <li><a href="#history">{% if lang == 'en' %}History{% else %}历史{% endif %}</a></li>
                 <li><a href="#players">{% if lang == 'en' %}Roster{% else %}球员名单{% endif %}</a></li>
+                <li><a href="#coaches">{% if lang == 'en' %}Coaches{% else %}教练组{% endif %}</a></li>
                 <li><a href="#rosters">{% if lang == 'en' %}Rosters{% else %}历年阵容{% endif %}</a></li>
                 <li><a href="#gallery">{% if lang == 'en' %}Gallery{% else %}相册{% endif %}</a></li>
                 <li><a href="#message-board">{% if lang == 'en' %}Guestbook{% else %}留言{% endif %}</a></li>
@@ -190,6 +191,28 @@
                         <p class="player-position">{{ player.position }}</p>
                         <p class="player-info">{% if lang == 'en' %}Height:{% else %}身高:{% endif %} {{ player.height }} | {% if lang == 'en' %}Weight:{% else %}体重:{% endif %} {{ player.weight }}</p>
                         <p class="player-bio">{{ player.bio }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 教练组 -->
+        <section id="coaches">
+            <div class="container">
+                <h2>{% if lang == 'en' %}Coaching Staff{% else %}教练组{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Team coaches and staff{% else %}教练团队{% endif %}</p>
+                <div class="grid">
+                    {% for coach in data.coaches %}
+                    <div class="card player-card">
+                        {% if coach.photo %}
+                        <img src="{{ coach.photo }}" class="player-photo-img" alt="{{ coach.name }}">
+                        {% else %}
+                        <div class="player-photo"></div>
+                        {% endif %}
+                        <h3>{{ coach.name }}</h3>
+                        <p class="player-position">{{ coach.role }}</p>
+                        <p class="player-bio">{{ coach.bio }}</p>
                     </div>
                     {% endfor %}
                 </div>
