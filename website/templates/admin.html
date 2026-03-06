@@ -252,6 +252,19 @@
             <div id="messages"></div>
         </div>
 
+        <!-- 视频管理 -->
+        <div class="section">
+            <h2>视频集锦</h2>
+            <button class="btn add-btn" onclick="addVideo()">+ 添加视频</button>
+            <div id="videos"></div>
+        </div>
+
+        <!-- 论坛管理 -->
+        <div class="section">
+            <h2>球迷论坛管理</h2>
+            <div id="discussions"></div>
+        </div>
+
         <!-- 历年阵容 -->
         <div class="section">
             <h2>历年阵容</h2>
@@ -286,6 +299,8 @@
             renderMessages();
             renderRosters();
             renderCoaches();
+            renderVideos();
+            renderDiscussions();
         }
 
         function renderCoaches() {
@@ -320,6 +335,44 @@
                 div.innerHTML = html;
                 container.appendChild(div);
             });
+        }
+
+        function renderVideos() {
+            const container = document.getElementById('videos');
+            container.innerHTML = '';
+            (data.videos || []).forEach((video, index) => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                let html = '';
+                if (video.url) {
+                    html += `<div class="form-group"><label>预览</label><video src="${video.url}" style="max-width:200px;max-height:150px;" controls></video></div>`;
+                }
+                html += `<div class="form-group"><label>上传视频</label><button class="btn upload-btn" onclick="uploadVideo(${index})">选择视频</button></div>`;
+                html += `<div class="form-group"><label>标题</label><input type="text" id="video_title_${index}" value="${video.title || ''}"></div>`;
+                html += `<div class="form-group"><label>描述</label><input type="text" id="video_desc_${index}" value="${video.desc || ''}"></div>`;
+                html += `<button class="delete-btn" onclick="deleteVideo(${index})">删除</button>`;
+                div.innerHTML = html;
+                container.appendChild(div);
+            });
+        }
+
+        function renderDiscussions() {
+            const container = document.getElementById('discussions');
+            container.innerHTML = '';
+            (data.discussions || []).forEach((disc, index) => {
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+                    <div class="form-group"><label>作者</label><input type="text" value="${disc.name || ''}" disabled></div>
+                    <div class="form-group"><label>内容</label><textarea disabled>${disc.content || ''}</textarea></div>
+                    <div class="form-group"><label>回复数</label><input type="text" value="${(disc.replies || []).length}" disabled></div>
+                    <button class="delete-btn" onclick="deleteDiscussion(${index})">删除</button>
+                `;
+                container.appendChild(div);
+            });
+            if ((data.discussions || []).length === 0) {
+                container.innerHTML = '<p style="color:#666">暂无讨论</p>';
+            }
         }
 
         function renderMessages() {
@@ -418,6 +471,29 @@
             };
             input.click();
         }
+        function addVideo() { if (!data.videos) data.videos = []; data.videos.push({title: '', url: '', desc: ''}); renderVideos(); }
+        function deleteVideo(index) { data.videos.splice(index, 1); renderVideos(); }
+        function uploadVideo(index) {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'video/*';
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const formData = new FormData();
+                formData.append('video', file);
+                try {
+                    const response = await fetch('/api/upload_video', {method: 'POST', body: formData});
+                    const result = await response.json();
+                    if (result.success) {
+                        data.videos[index].url = result.url;
+                        renderVideos();
+                    }
+                } catch (err) { alert('上传失败'); }
+            };
+            input.click();
+        }
+        function deleteDiscussion(index) { data.discussions.splice(index, 1); renderDiscussions(); }
 
         function deleteItem(containerId, index) {
             const map = {
@@ -551,6 +627,17 @@
                 let photo = data.coaches[i]?.photo || '';
                 if (name) {
                     data.coaches.push({name: name, role: role, bio: bio, photo: photo});
+                }
+            }
+
+            data.videos = [];
+            const videoCount = (data.videos || []).length;
+            for (let i = 0; i < videoCount; i++) {
+                let title = document.getElementById('video_title_' + i)?.value || '';
+                let desc = document.getElementById('video_desc_' + i)?.value || '';
+                let url = data.videos[i]?.url || '';
+                if (title || url) {
+                    data.videos.push({title: title, desc: desc, url: url});
                 }
             }
 

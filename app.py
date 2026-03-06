@@ -61,7 +61,11 @@ def default_data():
         ],
         "coaches": [
             {"name": "教练姓名", "role": "主教练", "bio": "教练简介", "photo": ""}
-        ]
+        ],
+        "videos": [
+            {"title": "比赛集锦", "url": "", "desc": ""}
+        ],
+        "discussions": []
     }
 
 @app.route('/')
@@ -149,6 +153,60 @@ def upload_image():
         img_data = base64.b64encode(file.read()).decode('utf-8')
         data_url = f"data:image/{ext};base64,{img_data}"
         return jsonify({'success': True, 'url': data_url})
+    return jsonify({'success': False})
+
+@app.route('/api/upload_video', methods=['POST'])
+def upload_video():
+    if 'video' not in request.files:
+        return jsonify({'success': False, 'message': 'No video'}), 400
+    
+    file = request.files['video']
+    if file.filename == '':
+        return jsonify({'success': False, 'message': 'No video'}), 400
+    
+    if file:
+        ext = file.filename.split('.')[-1].lower()
+        if ext not in ['mp4', 'webm', 'ogg']:
+            return jsonify({'success': False, 'message': 'Invalid type'}), 400
+        
+        video_data = base64.b64encode(file.read()).decode('utf-8')
+        data_url = f"data:video/{ext};base64,{video_data}"
+        return jsonify({'success': True, 'url': data_url})
+    return jsonify({'success': False})
+
+@app.route('/api/discussion', methods=['POST'])
+def add_discussion():
+    data = request.json
+    name = data.get('name', '匿名')
+    content = data.get('content', '')
+    if content:
+        current_data = load_data()
+        current_data['discussions'].insert(0, {
+            'name': name,
+            'content': content,
+            'time': data.get('time', ''),
+            'replies': []
+        })
+        save_data(current_data)
+        return jsonify({'success': True})
+    return jsonify({'success': False})
+
+@app.route('/api/discussion/reply', methods=['POST'])
+def reply_discussion():
+    data = request.json
+    index = data.get('index', -1)
+    name = data.get('name', '匿名')
+    content = data.get('content', '')
+    if content and index >= 0:
+        current_data = load_data()
+        if index < len(current_data['discussions']):
+            current_data['discussions'][index].setdefault('replies', []).insert(0, {
+                'name': name,
+                'content': content,
+                'time': data.get('time', '')
+            })
+            save_data(current_data)
+            return jsonify({'success': True})
     return jsonify({'success': False})
 
 if __name__ == '__main__':

@@ -29,7 +29,8 @@
                 <li><a href="#coaches">{% if lang == 'en' %}Coaches{% else %}教练组{% endif %}</a></li>
                 <li><a href="#rosters">{% if lang == 'en' %}Rosters{% else %}历年阵容{% endif %}</a></li>
                 <li><a href="#gallery">{% if lang == 'en' %}Gallery{% else %}相册{% endif %}</a></li>
-                <li><a href="#message-board">{% if lang == 'en' %}Guestbook{% else %}留言{% endif %}</a></li>
+                <li><a href="#videos">{% if lang == 'en' %}Videos{% else %}视频{% endif %}</a></li>
+                <li><a href="#discussion">{% if lang == 'en' %}Fan Forum{% else %}球迷论坛{% endif %}</a></li>
                 <li><a href="/login" style="color: #c9a227;">{% if lang == 'en' %}Admin{% else %}管理{% endif %}</a></li>
             </ul>
         </nav>
@@ -280,6 +281,67 @@
                             <span class="message-time">{{ msg.time }}</span>
                         </div>
                         <div class="message-content">{{ msg.content }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 视频集锦 -->
+        <section id="videos">
+            <div class="container">
+                <h2>{% if lang == 'en' %}Video Gallery{% else %}视频集锦{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Team videos{% else %}球队视频{% endif %}</p>
+                <div class="video-grid">
+                    {% for video in data.videos %}
+                    <div class="video-item">
+                        {% if video.url %}
+                        <video controls style="width:100%;max-height:250px;">
+                            <source src="{{ video.url }}" type="video/mp4">
+                            您的浏览器不支持视频播放
+                        </video>
+                        {% else %}
+                        <div class="video-placeholder"></div>
+                        {% endif %}
+                        <p class="video-title">{{ video.title }}</p>
+                        <p class="video-desc">{{ video.desc }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <!-- 球迷论坛 -->
+        <section id="discussion">
+            <div class="container">
+                <h2>{% if lang == 'en' %}Fan Forum{% else %}球迷论坛{% endif %}</h2>
+                <p class="section-desc">{% if lang == 'en' %}Discuss with fans{% else %}与球迷交流{% endif %}</p>
+                <div class="message-form">
+                    <input type="text" id="disc-name" placeholder="{% if lang == 'en' %}Your name{% else %}你的名字{% endif %}">
+                    <textarea id="disc-content" placeholder="{% if lang == 'en' %}Start a discussion...{% else %}发起讨论...{% endif %}"></textarea>
+                    <button class="btn" onclick="submitDiscussion()">{% if lang == 'en' %}Post{% else %}发布{% endif %}</button>
+                </div>
+                <div class="message-list" id="discussion-list">
+                    {% for disc in data.discussions %}
+                    <div class="message-item discussion-item">
+                        <div class="message-header">
+                            <span class="message-name">{{ disc.name }}</span>
+                            <span class="message-time">{{ disc.time }}</span>
+                        </div>
+                        <div class="message-content">{{ disc.content }}</div>
+                        {% if disc.replies %}
+                        <div class="discussion-replies">
+                            {% for reply in disc.replies %}
+                            <div class="reply-item">
+                                <span class="reply-name">{{ reply.name }}:</span>
+                                <span class="reply-content">{{ reply.content }}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                        <div class="reply-form">
+                            <input type="text" placeholder="{% if lang == 'en' %}Reply...{% else %}回复...{% endif %}" onkeypress="handleReply(event, {{ loop.index0 }})">
+                        </div>
                     </div>
                     {% endfor %}
                 </div>

@@ -72,3 +72,59 @@ function submitMessage() {
         }
     });
 }
+
+// 球迷论坛提交
+function submitDiscussion() {
+    const name = document.getElementById('disc-name').value.trim();
+    const content = document.getElementById('disc-content').value.trim();
+    
+    if (!content) {
+        alert('请输入讨论内容');
+        return;
+    }
+    
+    const now = new Date();
+    const time = now.getFullYear() + '-' + 
+        String(now.getMonth()+1).padStart(2,'0') + '-' + 
+        String(now.getDate()).padStart(2,'0');
+    
+    fetch('/api/discussion', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({name: name || '匿名', content: content, time: time})
+    })
+    .then(r => r.json())
+    .then(r => {
+        if (r.success) {
+            location.reload();
+        } else {
+            alert('发布失败，请重试');
+        }
+    });
+}
+
+// 回复讨论
+function handleReply(event, index) {
+    if (event.key === 'Enter') {
+        const content = event.target.value.trim();
+        if (!content) return;
+        
+        const name = document.getElementById('disc-name')?.value.trim() || '匿名';
+        const now = new Date();
+        const time = now.getFullYear() + '-' + 
+            String(now.getMonth()+1).padStart(2,'0') + '-' + 
+            String(now.getDate()).padStart(2,'0');
+        
+        fetch('/api/discussion/reply', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({index: index, name: name, content: content, time: time})
+        })
+        .then(r => r.json())
+        .then(r => {
+            if (r.success) {
+                location.reload();
+            }
+        });
+    }
+}
