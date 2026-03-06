@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if lang == 'en' %}Login / Register{% else %}登录 / 注册{% endif %} - {% if lang == 'en' %}{{ data.team_name_en }}{% else %}{{ data.team_name }}{% endif %}</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        .auth-container {
+            max-width: 400px;
+            margin: 60px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .auth-container h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        .auth-tabs {
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ddd;
+        }
+        .auth-tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: #666;
+        }
+        .auth-tab.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: -2px;
+        }
+        .auth-form {
+            display: none;
+        }
+        .auth-form.active {
+            display: block;
+        }
+        .auth-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .auth-form button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .auth-form button:hover {
+            background: var(--accent);
+        }
+        .error-msg {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .success-msg {
+            color: green;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .user-info {
+            text-align: center;
+        }
+        .user-info p {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        .logout-btn {
+            background: #e53e3e;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{% if lang == 'en' %}{{ data.team_name_en }}{% else %}{{ data.team_name }}{% endif %}</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>{% if lang == 'en' %}User Center{% else %}用户中心{% endif %}</h2>
+            
+            <div id="userPanel">
+                <div class="auth-tabs">
+                    <div class="auth-tab active" onclick="showTab('login')">{% if lang == 'en' %}Login{% else %}登录{% endif %}</div>
+                    <div class="auth-tab" onclick="showTab('register')">{% if lang == 'en' %}Register{% else %}注册{% endif %}</div>
+                </div>
+                
+                <div id="loginForm" class="auth-form active">
+                    <div id="loginError" class="error-msg" style="display:none"></div>
+                    <input type="text" id="loginUsername" placeholder="{% if lang == 'en' %}Username{% else %}用户名{% endif %}">
+                    <input type="password" id="loginPassword" placeholder="{% if lang == 'en' %}Password{% else %}密码{% endif %}">
+                    <button onclick="doLogin()">{% if lang == 'en' %}Login{% else %}登录{% endif %}</button>
+                </div>
+                
+                <div id="registerForm" class="auth-form">
+                    <div id="regError" class="error-msg" style="display:none"></div>
+                    <div id="regSuccess" class="success-msg" style="display:none"></div>
+                    <input type="text" id="regUsername" placeholder="{% if lang == 'en' %}Username{% else %}用户名{% endif %}">
+                    <input type="password" id="regPassword" placeholder="{% if lang == 'en' %}Password (min 6 chars){% else %}密码 (至少6位){% endif %}">
+                    <input type="password" id="regPassword2" placeholder="{% if lang == 'en' %}Confirm Password{% else %}确认密码{% endif %}">
+                    <button onclick="doRegister()">{% if lang == 'en' %}Register{% else %}注册{% endif %}</button>
+                </div>
+            </div>
+            
+            <div id="loggedInPanel" class="user-info" style="display:none">
+                <p>{% if lang == 'en' %}Welcome{% else %}欢迎{% endif %}, <span id="currentUser"></span>!</p>
+                <button class="logout-btn" onclick="doLogout()">{% if lang == 'en' %}Logout{% else %}退出登录{% endif %}</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const lang = '{{ lang }}';
+        
+        function showTab(tab) {
+            document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
+            if (tab === 'login') {
+                document.querySelector('.auth-tab:first-child').classList.add('active');
+                document.getElementById('loginForm').classList.add('active');
+            } else {
+                document.querySelector('.auth-tab:last-child').classList.add('active');
+                document.getElementById('registerForm').classList.add('active');
+            }
+        }
+        
+        function doLogin() {
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            
+            if (!username || !password) {
+                document.getElementById('loginError').textContent = '{% if lang == "en" %}Please fill all fields{% else %}请填写所有字段{% endif %}';
+                document.getElementById('loginError').style.display = 'block';
+                return;
+            }
+            
+            fetch('/api/login', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({username, password})
+            })
+            .then(r => r.json())
+            .then(r => {
+                if (r.success) {
+                    localStorage.setItem('user', r.username);
+                    location.reload();
+                } else {
+                    document.getElementById('loginError').textContent = r.message;
+                    document.getElementById('loginError').style.display = 'block';
+                }
+            });
+        }
+        
+        function doRegister() {
+            const username = document.getElementById('regUsername').value.trim();
+            const password = document.getElementById('regPassword').value;
+            const password2 = document.getElementById('regPassword2').value;
+            
+            if (!username || !password) {
+                document.getElementById('regError').textContent = '{% if lang == "en" %}Please fill all fields{% else %}请填写所有字段{% endif %}';
+                document.getElementById('regError').style.display = 'block';
+                return;
+            }
+            
+            if (password !== password2) {
+                document.getElementById('regError').textContent = '{% if lang == "en" %}Passwords do not match{% else %}两次密码不一致{% endif %}';
+                document.getElementById('regError').style.display = 'block';
+                return;
+            }
+            
+            fetch('/api/register', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({username, password})
+            })
+            .then(r => r.json())
+            .then(r => {
+                if (r.success) {
+                    document.getElementById('regError').style.display = 'none';
+                    document.getElementById('regSuccess').textContent = '{% if lang == "en" %}Registration successful! Please login.{% else %}注册成功！请登录{% endif %}';
+                    document.getElementById('regSuccess').style.display = 'block';
+                    setTimeout(() => showTab('login'), 1500);
+                } else {
+                    document.getElementById('regError').textContent = r.message;
+                    document.getElementById('regError').style.display = 'block';
+                }
+            });
+        }
+        
+        function doLogout() {
+            fetch('/api/logout')
+            .then(r => r.json())
+            .then(r => {
+                localStorage.removeItem('user');
+                location.reload();
+            });
+        }
+        
+        // Check login status
+        const user = localStorage.getItem('user');
+        if (user) {
+            document.getElementById('userPanel').style.display = 'none';
+            document.getElementById('loggedInPanel').style.display = 'block';
+            document.getElementById('currentUser').textContent = user;
+        }
+    </script>
+</body>
+</html>

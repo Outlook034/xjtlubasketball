@@ -3,6 +3,7 @@ import json
 import os
 import base64
 import uuid
+import hashlib
 
 app = Flask(__name__, 
             template_folder='website/templates',
@@ -65,7 +66,8 @@ def default_data():
         "videos": [
             {"title": "比赛集锦", "url": "", "desc": ""}
         ],
-        "discussions": []
+        "discussions": [],
+        "users": []
     }
 
 @app.route('/')
@@ -73,6 +75,12 @@ def index():
     data = load_data()
     lang = request.args.get('lang', 'zh')
     return render_template('index.html', data=data, lang=lang)
+
+@app.route('/user')
+def user():
+    data = load_data()
+    lang = request.args.get('lang', 'zh')
+    return render_template('user.html', data=data, lang=lang)
 
 @app.route('/player/<name>')
 def player(name):
@@ -135,6 +143,61 @@ def add_message():
         })
         save_data(current_data)
         return jsonify({'success': True})
+
+@app.route('/api/register', methods=['POST'])
+def register():
+    data = request.json
+    username = data.get('username', '').strip()
+    password = data.get('password', '')
+    
+    if not username or not password:
+        return jsonify({'success': False, 'message': '请填写用户名和密码'}), 400
+    
+    if len(password) < 6:
+        return jsonify({'success': False, 'message': '密码至少6位'}), 400
+    
+    current_data = load_data()
+    users = current_data.get('users', [])
+    
+    for user in users:
+        if user.get('username') == username:
+            return jsonify({'success': False, 'message': '用户名已存在'}), 400
+    
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    
+    users.append({
+        'username': username,
+        'password': hashed_password
+    })
+    current_data['users'] = users
+    save_data(current_data)
+    return jsonify({'success': True})
+
+@app.route('/api/login', methods=['POST'])
+def user_login():
+    data = request.json
+    username = data.get('username', '').strip()
+    password = data.get('password', '')
+    
+    if not username or not password:
+        return jsonify({'success': False, 'message': '请填写用户名和密码'}), 400
+    
+    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    
+    current_data = load_data()
+    users = current_data.get('users', [])
+    
+    for user in users:
+        if user.get('username') == username and user.get('password') == hashed_password:
+            session['user'] = username
+            return jsonify({'success': True, 'username': username})
+    
+    return jsonify({'success': False, 'message': '用户名或密码错误'}), 400
+
+@app.route('/api/logout')
+def user_logout():
+    session.pop('user', None)
+    return jsonify({'success': True})
 
 @app.route('/api/upload', methods=['POST'])
 def upload_image():
