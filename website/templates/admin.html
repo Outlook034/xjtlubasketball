@@ -298,8 +298,8 @@
                 div.className = 'item';
                 let html = '';
                 
-                if (containerId === 'players' || containerId === 'gallery') {
-                    const photoUrl = containerId === 'players' ? (item.photo || '') : (item.url || '');
+                if (containerId === 'players') {
+                    const photoUrl = item.photo || '';
                     if (photoUrl) {
                         html += `<div class="form-group">
                             <label>预览</label>
@@ -307,8 +307,20 @@
                         </div>`;
                     }
                     html += `<div class="form-group">
-                        <label>上传${containerId === 'players' ? '球员照片' : '图片'}</label>
+                        <label>上传球员照片</label>
                         <button class="btn upload-btn" onclick="uploadImage(${index}, '${containerId}')">选择图片</button>
+                    </div>`;
+                } else if (containerId === 'gallery') {
+                    const photoUrl = item.url || '';
+                    if (photoUrl) {
+                        html += `<div class="form-group">
+                            <label>预览</label>
+                            <img src="${photoUrl}" style="max-width:200px;max-height:150px;border-radius:8px;">
+                        </div>`;
+                    }
+                    html += `<div class="form-group">
+                        <label>图片链接URL</label>
+                        <input type="text" data-field="url" data-index="${index}" value="${item.url || ''}" placeholder="输入图片链接地址，如 https://xxx.com/photo.jpg">
                     </div>`;
                 }
                 
