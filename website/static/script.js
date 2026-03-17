@@ -1,6 +1,15 @@
 // 平滑滚动导航
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        // 允许绝对路径跳转
+        if (href && href.startsWith('/')) {
+            return; // 不阻止默认行为
+        }
+        // 允许外部链接
+        if (href && href.startsWith('http')) {
+            return;
+        }
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
@@ -12,6 +21,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
         }
     });
 });
+
 
 // 滚动显示动画
 const observerOptions = {
