@@ -4,12 +4,21 @@ import os
 import base64
 import uuid
 import hashlib
+import cloudinary
+import cloudinary.uploader
 
 app = Flask(__name__, 
             template_folder='website/templates',
             static_folder='website/static')
 app.secret_key = 'xjtlubasketball2024'
-app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
+
+cloudinary.config(
+    cloud_name=os.environ.get('CLOUDINARY_CLOUD_NAME', ''),
+    api_key=os.environ.get('CLOUDINARY_API_KEY', ''),
+    api_secret=os.environ.get('CLOUDINARY_API_SECRET', ''),
+    secure=True
+)
 
 DATA_FILE = os.environ.get('DATA_FILE', 'website/data.json')
 
@@ -214,6 +223,14 @@ def upload_image():
         if ext not in ['jpg', 'jpeg', 'png', 'gif', 'webp']:
             return jsonify({'success': False, 'message': 'Invalid type'}), 400
         
+        cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME', '')
+        if cloud_name:
+            try:
+                result = cloudinary.uploader.upload(file, folder='xjtlubasketball')
+                return jsonify({'success': True, 'url': result['secure_url']})
+            except Exception as e:
+                print(f"Cloudinary error: {e}")
+        
         img_data = base64.b64encode(file.read()).decode('utf-8')
         data_url = f"data:image/{ext};base64,{img_data}"
         return jsonify({'success': True, 'url': data_url})
@@ -232,6 +249,14 @@ def upload_video():
         ext = file.filename.split('.')[-1].lower()
         if ext not in ['mp4', 'webm', 'ogg']:
             return jsonify({'success': False, 'message': 'Invalid type'}), 400
+        
+        cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME', '')
+        if cloud_name:
+            try:
+                result = cloudinary.uploader.upload(file, folder='xjtlubasketball/videos', resource_type='video')
+                return jsonify({'success': True, 'url': result['secure_url']})
+            except Exception as e:
+                print(f"Cloudinary error: {e}")
         
         video_data = base64.b64encode(file.read()).decode('utf-8')
         data_url = f"data:video/{ext};base64,{video_data}"
