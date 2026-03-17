@@ -22,6 +22,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
+
 // 滚动显示动画
 const observerOptions = {
     threshold: 0.1,
