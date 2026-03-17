@@ -42,7 +42,11 @@
                 <h2>{% if lang == 'en' %}Welcome to{% else %}欢迎来到{% endif %}{{ data.team_name }}</h2>
                 <p class="hero-text">{{ data.slogan }}</p>
                 <div class="team-photo">
+                    {% if data.team_photo %}
+                    <img src="{{ data.team_photo }}" class="team-photo-img" alt="Team Photo">
+                    {% else %}
                     <div class="photo-placeholder">{% if lang == 'en' %}Team Photo{% else %}球队合照{% endif %}</div>
+                    {% endif %}
                 </div>
             </div>
         </section>

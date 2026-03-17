@@ -165,91 +165,17 @@
                 <label>口号</label>
                 <input type="text" id="slogan" value="{{ data.slogan }}">
             </div>
-        </div>
-
-        <!-- 球队数据 -->
-        <div class="section">
-            <h2>球队数据</h2>
-            <div class="stats-grid">
-                <div class="form-group">
-                    <label>比赛场次</label>
-                    <input type="text" id="stats_games" value="{{ data.stats.games }}">
-                </div>
-                <div class="form-group">
-                    <label>胜率</label>
-                    <input type="text" id="stats_win_rate" value="{{ data.stats.win_rate }}">
-                </div>
-                <div class="form-group">
-                    <label>冠军数</label>
-                    <input type="text" id="stats_championships" value="{{ data.stats.championships }}">
-                </div>
-                <div class="form-group">
-                    <label>球员总数</label>
-                    <input type="text" id="stats_players" value="{{ data.stats.players }}">
-                </div>
+            <div class="form-group">
+                <label>球队合照预览</label>
+                {% if data.team_photo %}
+                <img src="{{ data.team_photo }}" style="max-width:300px;max-height:200px;border-radius:8px;">
+                {% endif %}
             </div>
-        </div>
-
-        <!-- 名宿管理 -->
-        <div class="section">
-            <h2>名宿</h2>
-            <button class="btn add-btn" onclick="addLegend()">+ 添加名宿</button>
-            <div id="legends"></div>
-        </div>
-
-        <!-- 赛程管理 -->
-        <div class="section">
-            <h2>赛程</h2>
-            <button class="btn add-btn" onclick="addSchedule()">+ 添加比赛</button>
-            <div id="schedule"></div>
-        </div>
-
-        <!-- 球员统计 -->
-        <div class="section">
-            <h2>球员统计</h2>
-            <button class="btn add-btn" onclick="addPlayer()">+ 添加球员</button>
-            <div id="player_stats"></div>
-        </div>
-
-        <!-- 荣誉管理 -->
-        <div class="section">
-            <h2>名人堂荣誉</h2>
-            <button class="btn add-btn" onclick="addHonor()">+ 添加荣誉</button>
-            <div id="honors"></div>
-        </div>
-
-        <!-- 历史 -->
-        <div class="section">
-            <h2>球队历史</h2>
-            <button class="btn add-btn" onclick="addHistory()">+ 添加历史事件</button>
-            <div id="history"></div>
-        </div>
-
-        <!-- 球员名单详情 -->
-        <div class="section">
-            <h2>球员名单详情</h2>
-            <button class="btn add-btn" onclick="addPlayers()">+ 添加球员</button>
-            <div id="players"></div>
-        </div>
-
-        <!-- 相册 -->
-        <div class="section">
-            <h2>相册图库</h2>
-            <button class="btn add-btn" onclick="addGallery()">+ 添加照片</button>
-            <div id="gallery"></div>
-        </div>
-
-        <!-- 教练管理 -->
-        <div class="section">
-            <h2>教练组</h2>
-            <button class="btn add-btn" onclick="addCoaches()">+ 添加教练</button>
-            <div id="coaches"></div>
-        </div>
-
-        <!-- 留言管理 -->
-        <div class="section">
-            <h2>留言管理</h2>
-            <div id="messages"></div>
+            <div class="form-group">
+                <label>上传球队合照</label>
+                <button class="btn upload-btn" onclick="uploadTeamPhoto()">选择图片</button>
+                <input type="hidden" id="team_photo" value="{{ data.team_photo }}">
+            </div>
         </div>
 
         <!-- 视频管理 -->
@@ -451,6 +377,28 @@
         function deleteRoster(index) { data.rosters.splice(index, 1); renderRosters(); }
         function addCoaches() { if (!data.coaches) data.coaches = []; data.coaches.push({name: '', role: '', bio: '', photo: ''}); renderCoaches(); }
         function deleteCoaches(index) { data.coaches.splice(index, 1); renderCoaches(); }
+        function uploadTeamPhoto() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const formData = new FormData();
+                formData.append('image', file);
+                try {
+                    const response = await fetch('/api/upload', {method: 'POST', body: formData});
+                    const result = await response.json();
+                    if (result.success) {
+                        document.getElementById('team_photo').value = result.url;
+                        location.reload();
+                    } else {
+                        alert('上传失败');
+                    }
+                } catch (err) { alert('上传失败'); }
+            };
+            input.click();
+        }
         function uploadCoachPhoto(index) {
             const input = document.createElement('input');
             input.type = 'file';
@@ -571,6 +519,7 @@
             data.team_name = document.getElementById('team_name').value;
             data.team_name_en = document.getElementById('team_name_en').value;
             data.slogan = document.getElementById('slogan').value;
+            data.team_photo = document.getElementById('team_photo').value;
             data.stats.games = document.getElementById('stats_games').value;
             data.stats.win_rate = document.getElementById('stats_win_rate').value;
             data.stats.championships = document.getElementById('stats_championships').value;

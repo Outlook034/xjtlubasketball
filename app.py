@@ -28,6 +28,7 @@ def default_data():
         "team_name": "西交利物浦大学篮球队",
         "team_name_en": "XJTLU Basketball Team",
         "slogan": "团结 · 拼搏 · 进取",
+        "team_photo": "",
         "legends": [
             {"name": "待添加", "position": "后卫 | 10", "years": "2020-2024", "photo": ""}
         ],
