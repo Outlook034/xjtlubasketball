@@ -530,17 +530,18 @@
         }
 
         function saveAll() {
-            data.team_name = document.getElementById('team_name').value;
-            data.team_name_en = document.getElementById('team_name_en').value;
-            data.slogan = document.getElementById('slogan').value;
-            data.team_photo = document.getElementById('team_photo').value;
-            data.stats.games = document.getElementById('stats_games').value;
-            data.stats.win_rate = document.getElementById('stats_win_rate').value;
-            data.stats.championships = document.getElementById('stats_championships').value;
-            data.stats.players = document.getElementById('stats_players').value;
+            data.team_name = document.getElementById('team_name')?.value || '';
+            data.team_name_en = document.getElementById('team_name_en')?.value || '';
+            data.slogan = document.getElementById('slogan')?.value || '';
+            data.team_photo = document.getElementById('team_photo')?.value || '';
+            data.stats.games = document.getElementById('stats_games')?.value || '';
+            data.stats.win_rate = document.getElementById('stats_win_rate')?.value || '';
+            data.stats.championships = document.getElementById('stats_championships')?.value || '';
+            data.stats.players = document.getElementById('stats_players')?.value || '';
 
             ['legends', 'schedule', 'player_stats', 'honors', 'history', 'players', 'gallery'].forEach(key => {
                 const container = document.getElementById(key);
+                if (!container) return;
                 const inputs = container.querySelectorAll('input');
                 const fields = getFields(key);
                 data[key] = [];
