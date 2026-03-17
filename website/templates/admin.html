@@ -175,6 +175,7 @@
                 <label>上传球队合照</label>
                 <button class="btn upload-btn" onclick="uploadTeamPhoto()">选择图片</button>
                 <input type="hidden" id="team_photo" value="{{ data.team_photo }}">
+                <input type="file" id="teamPhotoInput" style="display:none" accept="image/*" onchange="handleTeamPhotoUpload(this)">
             </div>
         </div>
 
@@ -378,26 +379,24 @@
         function addCoaches() { if (!data.coaches) data.coaches = []; data.coaches.push({name: '', role: '', bio: '', photo: ''}); renderCoaches(); }
         function deleteCoaches(index) { data.coaches.splice(index, 1); renderCoaches(); }
         function uploadTeamPhoto() {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = 'image/*';
-            input.onchange = async (e) => {
-                const file = e.target.files[0];
-                if (!file) return;
-                const formData = new FormData();
-                formData.append('image', file);
-                try {
-                    const response = await fetch('/api/upload', {method: 'POST', body: formData});
-                    const result = await response.json();
-                    if (result.success) {
-                        document.getElementById('team_photo').value = result.url;
-                        location.reload();
-                    } else {
-                        alert('上传失败');
-                    }
-                } catch (err) { alert('上传失败'); }
-            };
-            input.click();
+            document.getElementById('teamPhotoInput').click();
+        }
+        function handleTeamPhotoUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+            const formData = new FormData();
+            formData.append('image', file);
+            fetch('/api/upload', {method: 'POST', body: formData})
+            .then(r => r.json())
+            .then(r => {
+                if (r.success) {
+                    document.getElementById('team_photo').value = r.url;
+                    alert('上传成功！请点击保存');
+                } else {
+                    alert('上传失败');
+                }
+            })
+            .catch(() => alert('上传失败'));
         }
         function uploadCoachPhoto(index) {
             const input = document.createElement('input');
