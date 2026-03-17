@@ -179,6 +179,20 @@
             </div>
         </div>
 
+        <!-- 球员名单详情 -->
+        <div class="section">
+            <h2>球员名单详情</h2>
+            <button class="btn add-btn" onclick="addPlayers()">+ 添加球员</button>
+            <div id="players"></div>
+        </div>
+
+        <!-- 相册 -->
+        <div class="section">
+            <h2>相册图库</h2>
+            <button class="btn add-btn" onclick="addGallery()">+ 添加照片</button>
+            <div id="gallery"></div>
+        </div>
+
         <!-- 视频管理 -->
         <div class="section">
             <h2>视频集锦</h2>
@@ -211,6 +225,7 @@
             document.getElementById('team_name').value = data.team_name;
             document.getElementById('team_name_en').value = data.team_name_en;
             document.getElementById('slogan').value = data.slogan;
+            document.getElementById('team_photo').value = data.team_photo || '';
             document.getElementById('stats_games').value = data.stats.games;
             document.getElementById('stats_win_rate').value = data.stats.win_rate;
             document.getElementById('stats_championships').value = data.stats.championships;
