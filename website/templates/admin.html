@@ -179,6 +179,64 @@
             </div>
         </div>
 
+        <!-- 名宿 -->
+        <div class="section">
+            <h2>名宿</h2>
+            <button class="btn add-btn" onclick="addLegend()">+ 添加名宿</button>
+            <div id="legends"></div>
+        </div>
+
+        <!-- 球队数据 -->
+        <div class="section">
+            <h2>球队数据</h2>
+            <div class="stats-grid">
+                <div class="form-group">
+                    <label>比赛场次</label>
+                    <input type="text" id="stats_games">
+                </div>
+                <div class="form-group">
+                    <label>胜率</label>
+                    <input type="text" id="stats_win_rate">
+                </div>
+                <div class="form-group">
+                    <label>冠军数</label>
+                    <input type="text" id="stats_championships">
+                </div>
+                <div class="form-group">
+                    <label>球员总数</label>
+                    <input type="text" id="stats_players">
+                </div>
+            </div>
+        </div>
+
+        <!-- 赛程 -->
+        <div class="section">
+            <h2>赛程</h2>
+            <button class="btn add-btn" onclick="addSchedule()">+ 添加比赛</button>
+            <div id="schedule"></div>
+        </div>
+
+        <!-- 比赛统计 -->
+        <div class="section">
+            <h2>比赛统计</h2>
+            <button class="btn add-btn" onclick="addPlayer()">+ 添加球员</button>
+            <div id="player_stats"></div>
+        </div>
+
+        <!-- 名人堂 -->
+        <div class="section">
+            <h2>名人堂荣誉</h2>
+            <button class="btn add-btn" onclick="addHonor()">+ 添加荣誉</button>
+            <div id="honors"></div>
+        </div>
+
+        <!-- 历史 -->
+        <div class="section">
+            <h2>球队历史</h2>
+            <button class="btn add-btn" onclick="addHistory()">+ 添加历史事件</button>
+            <div id="history"></div>
+        </div>
+
         <!-- 球员名单详情 -->
         <div class="section">
             <h2>球员名单详情</h2>
@@ -222,20 +280,20 @@
         let data = {{ data | tojson }};
 
         function render() {
-            document.getElementById('team_name').value = data.team_name;
-            document.getElementById('team_name_en').value = data.team_name_en;
-            document.getElementById('slogan').value = data.slogan;
-            document.getElementById('team_photo').value = data.team_photo || '';
-            document.getElementById('stats_games').value = data.stats.games;
-            document.getElementById('stats_win_rate').value = data.stats.win_rate;
-            document.getElementById('stats_championships').value = data.stats.championships;
-            document.getElementById('stats_players').value = data.stats.players;
+            if (document.getElementById('team_name')) document.getElementById('team_name').value = data.team_name || '';
+            if (document.getElementById('team_name_en')) document.getElementById('team_name_en').value = data.team_name_en || '';
+            if (document.getElementById('slogan')) document.getElementById('slogan').value = data.slogan || '';
+            if (document.getElementById('team_photo')) document.getElementById('team_photo').value = data.team_photo || '';
+            if (document.getElementById('stats_games')) document.getElementById('stats_games').value = data.stats?.games || '';
+            if (document.getElementById('stats_win_rate')) document.getElementById('stats_win_rate').value = data.stats?.win_rate || '';
+            if (document.getElementById('stats_championships')) document.getElementById('stats_championships').value = data.stats?.championships || '';
+            if (document.getElementById('stats_players')) document.getElementById('stats_players').value = data.stats?.players || '';
 
-            renderList('legends', data.legends, ['name', 'position', 'years']);
-            renderList('schedule', data.schedule, ['date', 'home', 'away', 'location']);
-            renderList('player_stats', data.player_stats, ['name', 'points', 'rebounds', 'assists', 'fg']);
-            renderList('honors', data.honors, ['year', 'title', 'desc']);
-            renderList('history', data.history, ['year', 'title', 'desc']);
+            renderList('legends', data.legends || [], ['name', 'position', 'years']);
+            renderList('schedule', data.schedule || [], ['date', 'home', 'away', 'location']);
+            renderList('player_stats', data.player_stats || [], ['name', 'points', 'rebounds', 'assists', 'fg']);
+            renderList('honors', data.honors || [], ['year', 'title', 'desc']);
+            renderList('history', data.history || [], ['year', 'title', 'desc']);
             renderList('players', data.players || [], ['name', 'number', 'position', 'height', 'weight', 'bio']);
             renderList('gallery', data.gallery || [], ['title', 'url', 'desc']);
             renderMessages();
