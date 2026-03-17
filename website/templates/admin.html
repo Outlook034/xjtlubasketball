@@ -630,16 +630,27 @@
                 }
             }
 
+            // Save coaches from temp array
+            const tempCoaches = [];
+            const coachInputs = document.querySelectorAll('#coaches .item');
+            coachInputs.forEach((item, i) => {
+                let name = item.querySelector('[id^="coach_name_"]')?.value || '';
+                let role = item.querySelector('[id^="coach_role_"]')?.value || '';
+                let bio = item.querySelector('[id^="coach_bio_"]')?.value || '';
+                let photo = data.coaches[i]?.photo || '';
+                if (name) tempCoaches.push({name, role, bio, photo});
+            });
+            data.coaches = tempCoaches;
+
             data.videos = [];
-            const videoCount = (data.videos || []).length;
-            for (let i = 0; i < videoCount; i++) {
-                let title = document.getElementById('video_title_' + i)?.value || '';
-                let desc = document.getElementById('video_desc_' + i)?.value || '';
+            // Save videos from DOM
+            const videoInputs = document.querySelectorAll('#videos .item');
+            videoInputs.forEach((item, i) => {
+                let title = item.querySelector('[id^="video_title_"]')?.value || '';
+                let desc = item.querySelector('[id^="video_desc_"]')?.value || '';
                 let url = data.videos[i]?.url || '';
-                if (title || url) {
-                    data.videos.push({title: title, desc: desc, url: url});
-                }
-            }
+                if (title || url) data.videos.push({title, desc, url});
+            });
 
             fetch('/api/update', {
                 method: 'POST',
