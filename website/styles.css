@@ -81,16 +81,25 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(44, 82, 130, 0.9)),
-                url('https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1200') center/cover;
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 25%, #1a365d 50%, #2c5282 75%, #1a365d 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
     color: var(--white);
     padding: 100px 0;
     text-align: center;
 }
 
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text {
