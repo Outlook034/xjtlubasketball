@@ -602,26 +602,27 @@
                 if (!container) return;
                 const inputs = container.querySelectorAll('input');
                 const fields = getFields(key);
+                if (!fields) return;
                 data[key] = [];
                 for (let i = 0; i < inputs.length; i += fields.length) {
                     let obj = {};
                     fields.forEach((field, j) => {
-                        obj[field] = inputs[i + j].value;
+                        obj[field] = inputs[i + j]?.value || '';
                     });
                     if (obj[fields[0]]) data[key].push(obj);
                 }
             });
 
             const msgContainers = document.getElementById('messages');
-            const msgInputs = msgContainers.querySelectorAll('input, textarea');
+            const msgInputs = msgContainers?.querySelectorAll('input, textarea') || [];
             data.messages = [];
             for (let i = 0; i < msgInputs.length; i += 2) {
-                let obj = {name: msgInputs[i].value, content: msgInputs[i+1] ? msgInputs[i+1].value : ''};
+                let obj = {name: msgInputs[i]?.value || '', content: msgInputs[i+1]?.value || ''};
                 if (obj.name) data.messages.push(obj);
             }
 
             const rosterContainers = document.getElementById('rosters');
-            const rosterInputs = rosterContainers.querySelectorAll('input');
+            const rosterInputs = rosterContainers?.querySelectorAll('input') || [];
             data.rosters = [];
             for (let i = 0; i < rosterInputs.length; i += 2) {
                 let year = rosterInputs[i].value;
